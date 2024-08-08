@@ -23,7 +23,7 @@ export default function Home() {
           backgroundImage: `url(${Imah})`,marginTop:"40px",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",width:'100%'                  
         }}
       >
-        <div style={{textAlign:"center",display:"flex",flexDirection:"column"}}>
+        <div style={{textAlign:"center",display:"flex",flexDirection:"column",paddingLeft:"20px",paddingRight:"20px"}}>
           <h1>MuleSoft API Development <br/>
           From Idea to Product</h1>
           <div>
