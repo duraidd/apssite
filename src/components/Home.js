@@ -20,7 +20,7 @@ export default function Home() {
       <Appheader />
       <div className="saple"
         style={{
-          backgroundImage: `url(${Imah})`,marginTop:"40px",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",width:'100%'          
+          backgroundImage: `url(${Imah})`,marginTop:"40px",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",width:'100%'                  
         }}
       >
         <div style={{textAlign:"center",display:"flex",flexDirection:"column"}}>

@@ -7,29 +7,11 @@ import Img3 from "../asset/mul.png";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export default function Contact() {
-  const contentData = [
-    {
-      head: "API Development",
-      logo: Img1,
-      content:
-        "We provide comprehensive API development services to help businesses build scalable and secure APIs. Our expert team offers end-to-end solutions for API development, from design and development to testing and deployment.",
-    },
-    {
-      head: "Salesforce Services",
-      logo: Img2,
-      content:
-        "We provide comprehensive API development services to help businesses build scalable and secure APIs. Our expert team offers end-to-end solutions for API development, from design and development to testing and deployment.",
-    },
-    {
-      head: "MuleSoft Services",
-      logo: Img3,
-      content:
-        "We provide comprehensive API development services to help businesses build scalable and secure APIs. Our expert team offers end-to-end solutions for API development, from design and development to testing and deployment.",
-    },
-  ];
+
+
 
   return (
-    <div>
+    <div style={{display:'flex',flexDirection:"column"}} >
       <div style={{ textAlign: "center" ,paddingLeft:"20px",paddingRight:"20px"}}>
         <h1
           style={{
@@ -98,7 +80,6 @@ export default function Contact() {
               justifyContent: "center"
             }}
           >
-
             <IconButton
               style={{
                 backgroundColor: "rgba(255, 94, 39, 0.1)",
@@ -226,7 +207,6 @@ export default function Contact() {
         </div>
 
       </div>
-
     </div>
   );
 }

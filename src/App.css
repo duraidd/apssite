@@ -49,7 +49,7 @@
 /* For smaller screens */
 @media (max-width: 768px) {
   .saple {
-    background-size: 100% 100%; /* adjust the size for smaller screens */
+    background-size: 50% 50% 50%; /* adjust the size for smaller screens */
   }
 }
 
