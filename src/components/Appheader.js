@@ -109,7 +109,7 @@ function Appheader(props) {
               <Button
                 key={item.name}
                 sx={{
-                  color: "black",
+                  color: item.path === pathname ? "white" : "black",
                   fontSize:"1rem",
                   fontFamily:"Lato",
                   backgroundColor: item.path === pathname ? "#2F4858" : "",

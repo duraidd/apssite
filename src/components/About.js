@@ -11,7 +11,8 @@ export default function About() {
           style={{
             position: "relative",
             left: '-10%',
-            top: '10%'
+            top: '10%',
+            width:'100%'
           }}                                  
         />
         </div>
