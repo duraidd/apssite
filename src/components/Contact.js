@@ -1,62 +1,232 @@
 import React from "react";
 import Appheader from "./Appheader";
+import { Button, IconButton } from "@mui/material";
+import Img1 from "../asset/api.png";
+import Img2 from "../asset/sal.png";
+import Img3 from "../asset/mul.png";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 export default function Contact() {
+  const contentData = [
+    {
+      head: "API Development",
+      logo: Img1,
+      content:
+        "We provide comprehensive API development services to help businesses build scalable and secure APIs. Our expert team offers end-to-end solutions for API development, from design and development to testing and deployment.",
+    },
+    {
+      head: "Salesforce Services",
+      logo: Img2,
+      content:
+        "We provide comprehensive API development services to help businesses build scalable and secure APIs. Our expert team offers end-to-end solutions for API development, from design and development to testing and deployment.",
+    },
+    {
+      head: "MuleSoft Services",
+      logo: Img3,
+      content:
+        "We provide comprehensive API development services to help businesses build scalable and secure APIs. Our expert team offers end-to-end solutions for API development, from design and development to testing and deployment.",
+    },
+  ];
+
   return (
     <div>
-      <Appheader />
-      <div style={{  backgroundColor: '#f9f9f9', borderRadius: '0.5rem', boxShadow: '0 0 0.5rem rgba(0, 0, 0, 0.2)', padding: '2rem' }}>
-        <div style={{ textAlign: 'center' }}>
-          <h1 style={{ fontFamily: 'font-title', fontSize: '1.875rem', color: '#333' }}>Customized IT Services to Elevate your Business</h1>
-          <p style={{ marginTop: '1rem', color: '#666' }}>
-            Phi Dimensions is your one stop shop for technologically diverse solutions driven by top-notch platforms like MuleSoft, Salesforce, API (Application Programming Interface).
-          </p>
-        </div>
-        <div style={{ marginTop: '3rem', display: 'flex', justifyContent: 'space-between' }}>
-          <div style={{ textAlign: 'center', backgroundColor: '#fff', borderRadius: '0.25rem', padding: '2rem', border: '1px solid #ddd' }}>
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
-              <img src="" width="60" height="60" style={{objectFit:"cover", borderRadius: '50%'}} alt="API Logo" />
-            </div>
-            <h2 style={{ fontSize: '1.25rem', fontWeight: 600, color: '#333' }}>API Development</h2>
-            <p style={{ marginTop: '1rem', color: '#666' }}>
-              We provide comprehensive API development services to help businesses build scalable and secure APIs. Our expert team offers end-to-end solutions for API development, from design and development to testing and deployment.
-            </p>
-            <div style={{ marginTop: '1rem', display: 'flex', justifyContent:'center' }}>
-              <button style={{padding: '0.5rem', borderRadius: '50%', backgroundColor: 'rgba(255, 94, 39, 0.1)', color: '#fff',border:'none'}}>
-                <span class="material-symbols-outlined">a</span>
-              </button>
-            </div>
-          </div>
-          <div style={{ textAlign: 'center', backgroundColor: '#fff', borderRadius: '0.25rem', padding: '2rem', border: '1px solid #ddd' }}>
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
-              <img src="" width="60" height="60" style={{ objectFit:"cover", borderRadius: '50%' }} alt="Salesforce Logo" />
-            </div>
-            <h2 style={{ fontSize: '1.25rem', fontWeight: 600, color: '#333' }}>Salesforce Services</h2>
-            <p style={{ marginTop: '1rem', color: '#666' }}>
-              We provide comprehensive API development services to help businesses build scalable and secure APIs. Our expert team offers end-to-end solutions for API development, from design and development to testing and deployment.
-            </p>
-            <div style={{ marginTop: '1rem', display: 'flex', justifyItems: 'center' }}>
-              <button style={{ padding: '0.5rem', borderRadius: '50%', backgroundColor: 'rgba(255, 94, 39, 0.1)', color: '#fff',border:'none' }}>
-                <span class="material-symbols-outlined">arrow_forward</span>
-              </button>
-            </div>
-          </div>
-          <div style={{ textAlign: 'center', backgroundColor: '#fff', borderRadius: '0.25rem', padding: '2rem', border: '1px solid #ddd' }}>
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
-              <img src="" width="60" height="60" style={{ objectFit:"cover", borderRadius: '50%' }} alt="Salesforce Logo" />
-            </div>
-            <h2 style={{ fontSize: '1.25rem', fontWeight: 600, color: '#333' }}>Salesforce Services</h2>
-            <p style={{ marginTop: '1rem', color: '#666' }}>
-              We provide comprehensive API development services to help businesses build scalable and secure APIs. Our expert team offers end-to-end solutions for API development, from design and development to testing and deployment.
-            </p>
-            <div style={{ marginTop: '1rem', display: 'flex', justifyItems: 'center' }}>
-              <button style={{ padding: '0.5rem', borderRadius: '50%', backgroundColor: 'rgba(255, 94, 39, 0.1)', color: '#fff',border:'none' }}>
-                <span class="material-symbols-outlined">arrow_forward</span>
-              </button>
-            </div>
-          </div>
-        </div>
+      <div style={{ textAlign: "center" ,paddingLeft:"20px",paddingRight:"20px"}}>
+        <h1
+          style={{
+            fontFamily: "font-title",
+            fontSize: "1.875rem",
+            color: "#333",
+          }}
+        >
+          Customized IT Services to Elevate your Business
+        </h1>
+        <p style={{ marginTop: "1rem", color: "#666" }}>
+          Phi Dimensions is your one stop shop for technologically diverse
+          solutions driven by top-notch platforms like MuleSoft, Salesforce,
+          API (Application Programming Interface).
+        </p>
       </div>
+      <div
+        style={{
+          marginTop: "3rem",
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-evenly",
+          padding: "20px",
+          flexWrap: "wrap",
+          gap: "30px"          
+        }}
+      >
+
+        <div
+          style={{
+            textAlign: "center",
+            backgroundColor: "#fff",
+            borderRadius: "1rem",
+            padding: "2rem",
+            border: "1px solid",
+            borderColor: 'rgb(255,179,180)'
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: "1rem"
+            }}
+          >
+            <div style={{ padding: '10px', borderRadius: "50%", boxShadow: "1px 12px 20px #f8a6b6" }}>
+              <img
+                src={Img1}
+                width="50"
+                height="50"
+                style={{ objectFit: "fill" }}
+                alt="API Logo"
+              />
+            </div>
+          </div>
+          <h2
+            style={{ fontSize: "1.25rem", fontWeight: 600, color: "#333" }}
+          >
+            API Development
+          </h2>
+          <p style={{ marginTop: "1rem", color: "#666" }}>We provide comprehensive API development <br /> services to help businesses build scalable and <br /> secure APIs. Our expert team offers end-to <br /> -end solutions for API development, from design <br /> and development to testing and deployment.</p>
+          <div
+            style={{
+              marginTop: "1rem",
+              display: "flex",
+              justifyContent: "center"
+            }}
+          >
+
+            <IconButton
+              style={{
+                backgroundColor: "rgba(255, 94, 39, 0.1)",
+                color: "#FF2A53",
+                border: "none",
+                borderRadius: '50%',
+                padding: '10px'
+              }}
+            >
+              <ArrowForwardIcon />
+            </IconButton>
+          </div>
+        </div>
+
+
+        <div
+          style={{
+            textAlign: "center",
+            backgroundColor: "#fff",
+            borderRadius: "1rem",
+            padding: "2rem",
+            border: "1px solid",
+            borderColor: 'rgb(255,179,180)'
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: "1rem"
+            }}
+          >
+            <div style={{ padding: '10px', borderRadius: "50%", boxShadow: "1px 12px 20px #f8a6b6" }}>
+              <img
+                src={Img1}
+                width="50"
+                height="50"
+                style={{ objectFit: "fill" }}
+                alt="API Logo"
+              />
+            </div>
+          </div>
+          <h2
+            style={{ fontSize: "1.25rem", fontWeight: 600, color: "#333" }}
+          >
+            API Development
+          </h2>
+          <p style={{ marginTop: "1rem", color: "#666" }}>We provide comprehensive API development <br /> services to help businesses build scalable and <br /> secure APIs. Our expert team offers end-to <br /> -end solutions for API development, from design <br /> and development to testing and deployment.</p>
+          <div
+            style={{
+              marginTop: "1rem",
+              display: "flex",
+              justifyContent: "center"
+            }}
+          >
+
+            <IconButton
+              style={{
+                backgroundColor: "rgba(255, 94, 39, 0.1)",
+                color: "#FF2A53",
+                border: "none",
+                borderRadius: '50%',
+                padding: '10px'
+              }}
+            >
+              <ArrowForwardIcon />
+            </IconButton>
+          </div>
+        </div>
+
+
+        <div
+          style={{
+            textAlign: "center",
+            backgroundColor: "#fff",
+            borderRadius: "1rem",
+            padding: "2rem",
+            border: "1px solid",
+            borderColor: 'rgb(255,179,180)'
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: "1rem"
+            }}
+          >
+            <div style={{ padding: '10px', borderRadius: "50%", boxShadow: "1px 12px 20px #f8a6b6" }}>
+              <img
+                src={Img1}
+                width="50"
+                height="50"
+                style={{ objectFit: "fill" }}
+                alt="API Logo"
+              />
+            </div>
+          </div>
+          <h2
+            style={{ fontSize: "1.25rem", fontWeight: 600, color: "#333" }}
+          >
+            API Development
+          </h2>
+          <p style={{ marginTop: "1rem", color: "#666" }}>We provide comprehensive API development <br /> services to help businesses build scalable and <br /> secure APIs. Our expert team offers end-to <br /> -end solutions for API development, from design <br /> and development to testing and deployment.</p>
+          <div
+            style={{
+              marginTop: "1rem",
+              display: "flex",
+              justifyContent: "center"
+            }}
+          >
+
+            <IconButton
+              style={{
+                backgroundColor: "rgba(255, 94, 39, 0.1)",
+                color: "#FF2A53",
+                border: "none",
+                borderRadius: '50%',
+                padding: '10px'
+              }}
+            >
+              <ArrowForwardIcon />
+            </IconButton>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   );
 }

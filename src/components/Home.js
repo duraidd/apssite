@@ -4,6 +4,7 @@ import Imah from "../asset/Banner.jpg";
 import "./../App.css"
 import { Button } from "@mui/material";
 import About from "./About";
+import Contact from "./Contact";
 
 
 export default function Home() {
@@ -21,7 +22,7 @@ export default function Home() {
       <Appheader />
       <div className="saple"
         style={{
-          backgroundImage: `url(${Imah})`,marginTop:"40px",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"          
+          backgroundImage: `url(${Imah})`,marginTop:"40px",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",width:'100%'          
         }}
       >
         <div style={{textAlign:"center",display:"flex",flexDirection:"column"}}>
@@ -34,6 +35,8 @@ export default function Home() {
         
       </div>
       <About/>
+      <Contact/>
+      
     </div>
   );
 }
