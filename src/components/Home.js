@@ -14,9 +14,7 @@ export default function Home() {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        alignItems: "center",
-        // backgroundColor: "grey",
-        minHeight: "100vh",
+        alignItems: "center"               
       }}
     >
       <Appheader />
