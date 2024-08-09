@@ -7,6 +7,7 @@ import About from "./About";
 import Contact from "./Contact";
 import ScrollAnimation from 'react-animate-on-scroll';
 import Custcard from "./Custcard";
+import Experirnce from "./Experirnce";
 
 
 
@@ -40,6 +41,7 @@ export default function Home() {
       <About />
       <Contact />
       <Custcard />
+      <Experirnce/>
 
     </div>
   );

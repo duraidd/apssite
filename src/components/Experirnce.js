@@ -1,0 +1,60 @@
+import { Box } from '@mui/material'
+import React from 'react'
+
+function Experirnce() {
+    return (
+
+        <div style={{
+            backgroundColor: '#f7f7f7',
+            // boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
+            borderRadius: '10px',
+            padding: '10px',
+            width: '100%',
+            margin: '0 auto',
+            padding: '5%  10%  5%  10%'
+
+        }}>
+            <Box sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                gap: '8px',
+                justifyContent: 'space-between',
+                '@media (max-width: 768px)': {
+                    flexWrap: 'wrap',
+                }
+            }}>
+                <Box sx={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    gap: '20px',
+                    flexWrap: 'wrap',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    '@media (max-width: 425px)': {
+                        display: 'none',
+                    },
+                }} >                    
+                      
+                    <img style={{ width: '50%', height: '450px', objectFit: 'cover', borderRadius: '100%',border:'10px dashed red' ,padding:"20px" }} src="https://tools-api.webcrumbs.org/image-placeholder/350/350/office/1" alt="Office scene" />
+
+
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: 'rgba(51, 122, 183, 0.1)', padding: '6px', borderRadius: '10px' }}>
+                        <span style={{ fontSize: '40px', color: '#337ab7', fontFamily: 'Material Symbols Outlined' }}>military_tech</span>
+                        <p style={{ fontSize: '24px', color: '#337ab7', fontWeight: 'bold' }}>10+</p>
+                        <p style={{ fontSize: '16px', color: '#337ab7' }}>Years Of Experience</p>
+                    </div>
+                </Box>
+                <div>
+                    <h2 style={{ fontSize: '36px', color: '#337ab7', fontFamily: 'bold', marginBottom: '16px' }}>Empowering businesses with innovative <br /> IT solutions</h2>
+                    <p style={{ fontSize: '16px', color: '#333', marginBottom: '16px' }}>We are a team of passionate technology enthusiasts who are dedicated to  helping businesses achieve their goals through innovative IT solutions.</p>
+                    <p style={{ fontSize: '16px', color: '#333', marginBottom: '16px' }}>Our expertise lies in developing and implementing cutting-edge solutions that streamline your business processes, enhance productivity,<br /> and drive growth. We work with a wide range of clients  across industries, from small startups  to large corporations, to deliver customized <br /> IT services that fit their unique needs.</p>
+                    <p style={{ fontSize: '16px', color: '#333' }}>We are a team of passionate technology enthusiasts who are dedicated to<br /> helping businesses achieve their goals <br /> through innovative IT solutions.</p>
+                </div>
+            </Box>
+        </div>
+
+    )
+}
+
+export default Experirnce
