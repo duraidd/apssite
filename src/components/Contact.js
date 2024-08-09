@@ -6,6 +6,7 @@ import Img2 from "../asset/sal.png";
 import Img3 from "../asset/mul.png";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ScrollAnimation from 'react-animate-on-scroll';
+import Box from "@mui/material/Box";
 
 
 
@@ -15,32 +16,32 @@ export default function Contact() {
 
 
   return (
-    <div style={{display:'flex',flexDirection:"column",paddingTop:"20px",paddingBottom:"20px" ,overflow:'hidden'}} >
+    <div style={{ display: 'flex', flexDirection: "column", paddingTop: "20px", paddingBottom: "20px", overflow: 'hidden' }} >
 
 
 
 
-      <div style={{ textAlign: "center" ,paddingLeft:"20px",paddingRight:"20px"}}>
-      <ScrollAnimation animateIn="slideInRight">
-        <h1
-          style={{
-            fontFamily: "font-title",
-            fontSize: "1.875rem",
-            color: "#333",
-          }}
-        >
-          Customized IT Services to Elevate your Business
-        </h1>
+      <div style={{ textAlign: "center", paddingLeft: "20px", paddingRight: "20px" }}>
+        <ScrollAnimation animateIn="slideInRight">
+          <h1
+            style={{
+              fontFamily: "font-title",
+              fontSize: "1.875rem",
+              color: "#333",
+            }}
+          >
+            Customized IT Services to Elevate your Business
+          </h1>
         </ScrollAnimation>
         <ScrollAnimation animateIn="slideInLeft">
-        <p style={{ marginTop: "1rem", color: "#666" }}>
-          Phi Dimensions is your one stop shop for technologically diverse
-          solutions driven by top-notch platforms like MuleSoft, Salesforce,
-          API (Application Programming Interface).
-        </p>
+          <p style={{ marginTop: "1rem", color: "#666" }}>
+            Phi Dimensions is your one stop shop for technologically diverse
+            solutions driven by top-notch platforms like MuleSoft, Salesforce,
+            API (Application Programming Interface).
+          </p>
         </ScrollAnimation>
       </div>
-   
+
       <div
         style={{
           marginTop: "3rem",
@@ -49,18 +50,19 @@ export default function Contact() {
           justifyContent: "space-evenly",
           padding: "20px",
           flexWrap: "wrap",
-          gap: "30px"          
+          gap: "30px"
         }}
       >
 
-        <div
-          style={{
+        <Box
+          sx={{
             textAlign: "center",
             backgroundColor: "#fff",
             borderRadius: "1rem",
             padding: "2rem",
             border: "1px solid",
-            borderColor: 'rgb(255,179,180)'
+            borderColor: 'rgb(255,179,180)',
+            "&:hover":{boxShadow: "8px 12px 12px #f8a6b6"}
           }}
         >
           <div
@@ -80,15 +82,15 @@ export default function Contact() {
               />
             </div>
           </div>
-          <ScrollAnimation animateIn="swing">          
-          <h2
-            style={{ fontSize: "1.25rem", fontWeight: 600, color: "#333" }}
-          >
-            API Development
-          </h2>
+          <ScrollAnimation animateIn="swing">
+            <h2
+              style={{ fontSize: "1.25rem", fontWeight: 600, color: "#333" }}
+            >
+              API Development
+            </h2>
           </ScrollAnimation>
           <ScrollAnimation animateIn="slideInLeft">
-          <p style={{ marginTop: "1rem", color: "#666" }}>We provide comprehensive API development <br /> services to help businesses build scalable and <br /> secure APIs. Our expert team offers end-to <br /> -end solutions for API development, from design <br /> and development to testing and deployment.</p>
+            <p style={{ marginTop: "1rem", color: "#666" }}>We provide comprehensive API development <br /> services to help businesses build scalable and <br /> secure APIs. Our expert team offers end-to <br /> -end solutions for API development, from design <br /> and development to testing and deployment.</p>
           </ScrollAnimation>
           <div
             style={{
@@ -109,17 +111,18 @@ export default function Contact() {
               <ArrowForwardIcon />
             </IconButton>
           </div>
-        </div>
+        </Box>
 
 
-        <div
-          style={{
+        <Box
+          sx={{
             textAlign: "center",
             backgroundColor: "#fff",
             borderRadius: "1rem",
             padding: "2rem",
             border: "1px solid",
-            borderColor: 'rgb(255,179,180)'
+            borderColor: 'rgb(255,179,180)',
+            "&:hover":{ boxShadow: "8px 12px 12px #f8a6b6"} 
           }}
         >
           <div
@@ -139,15 +142,15 @@ export default function Contact() {
               />
             </div>
           </div>
-          <ScrollAnimation animateIn="swing">  
-          <h2
-            style={{ fontSize: "1.25rem", fontWeight: 600, color: "#333" }}
-          >
-            API Development
-          </h2>
+          <ScrollAnimation animateIn="swing">
+            <h2
+              style={{ fontSize: "1.25rem", fontWeight: 600, color: "#333" }}
+            >
+              API Developmentff
+            </h2>
           </ScrollAnimation>
           <ScrollAnimation animateIn="slideInLeft">
-          <p style={{ marginTop: "1rem", color: "#666" }}>We provide comprehensive API development <br /> services to help businesses build scalable and <br /> secure APIs. Our expert team offers end-to <br /> -end solutions for API development, from design <br /> and development to testing and deployment.</p>
+            <p style={{ marginTop: "1rem", color: "#666" }}>We provide comprehensive API development <br /> services to help businesses build scalable and <br /> secure APIs. Our expert team offers end-to <br /> -end solutions for API development, from design <br /> and development to testing and deployment.</p>
           </ScrollAnimation>
           <div
             style={{
@@ -169,17 +172,19 @@ export default function Contact() {
               <ArrowForwardIcon />
             </IconButton>
           </div>
-        </div>
+
+        </Box>
 
 
-        <div
-          style={{
+        <Box
+          sx={{
             textAlign: "center",
             backgroundColor: "#fff",
             borderRadius: "1rem",
             padding: "2rem",
             border: "1px solid",
-            borderColor: 'rgb(255,179,180)'
+            borderColor: 'rgb(255,179,180)',            
+           "&:hover":{ boxShadow: "8px 12px 12px #f8a6b6"} 
           }}
         >
           <div
@@ -199,15 +204,15 @@ export default function Contact() {
               />
             </div>
           </div>
-          <ScrollAnimation animateIn="swing">  
-          <h2
-            style={{ fontSize: "1.25rem", fontWeight: 600, color: "#333" }}
-          >
-            API Development
-          </h2>
+          <ScrollAnimation animateIn="swing">
+            <h2
+              style={{ fontSize: "1.25rem", fontWeight: 600, color: "#333" }}
+            >
+              API Development
+            </h2>
           </ScrollAnimation>
           <ScrollAnimation animateIn="slideInLeft">
-          <p style={{ marginTop: "1rem", color: "#666" }}>We provide comprehensive API development <br /> services to help businesses build scalable and <br /> secure APIs. Our expert team offers end-to <br /> -end solutions for API development, from design <br /> and development to testing and deployment.</p>
+            <p style={{ marginTop: "1rem", color: "#666" }}>We provide comprehensive API development <br /> services to help businesses build scalable and <br /> secure APIs. Our expert team offers end-to <br /> -end solutions for API development, from design <br /> and development to testing and deployment.</p>
           </ScrollAnimation>
           <div
             style={{
@@ -229,7 +234,7 @@ export default function Contact() {
               <ArrowForwardIcon />
             </IconButton>
           </div>
-        </div>
+        </Box>
 
       </div>
 
