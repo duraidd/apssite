@@ -2,12 +2,14 @@ import React from "react";
 import Appheader from "./Appheader";
 import Imah from "../asset/Banner.jpg";
 import "./../App.css"
-import { Button } from "@mui/material";
+import { Button, Icon, IconButton } from "@mui/material";
 import About from "./About";
 import Contact from "./Contact";
 import ScrollAnimation from 'react-animate-on-scroll';
 import Custcard from "./Custcard";
 import Experirnce from "./Experirnce";
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import Box from "@mui/material/Box";
 
 
 
@@ -41,7 +43,24 @@ export default function Home() {
       <About />
       <Contact />
       <Custcard />
-      <Experirnce/>
+      <Experirnce />
+
+      <Box sx={{
+        position: 'fixed',
+        bottom: 10,
+        right: 10,
+        zIndex: 999
+      }} >
+        <a href="https://wa.me/919702470579" target="_blank">
+          <IconButton sx={{
+            '&:hover': {
+              backgroundColor: "#E0FBE2"
+            }
+          }}>
+            <WhatsAppIcon style={{ color: 'green', fontSize: "50px" }} />
+          </IconButton>
+        </a>
+      </Box>
 
     </div>
   );
