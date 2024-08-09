@@ -5,6 +5,8 @@ import "./../App.css"
 import { Button } from "@mui/material";
 import About from "./About";
 import Contact from "./Contact";
+import ScrollAnimation from 'react-animate-on-scroll';
+
 
 
 export default function Home() {
@@ -24,8 +26,10 @@ export default function Home() {
         }}
       >
         <div style={{textAlign:"center",display:"flex",flexDirection:"column",paddingLeft:"20px",paddingRight:"20px"}}>
+          <ScrollAnimation animateIn="swing" >
           <h1>MuleSoft API Development <br/>
           From Idea to Product</h1>
+          </ScrollAnimation>          
           <div>
           <Button variant="contained" sx={{backgroundColor:"red" ,"&:hover":{backgroundColor:"red"}}} >Get Started</Button>
           </div>          
