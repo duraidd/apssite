@@ -22,7 +22,7 @@ export default function Contact() {
 
 
       <div style={{ textAlign: "center", paddingLeft: "20px", paddingRight: "20px" }}>
-        <ScrollAnimation animateIn="slideInRight">
+        <ScrollAnimation animateIn="slideInRight" duration="1.5">
           <h1
             style={{
               fontFamily: "font-title",
@@ -33,7 +33,7 @@ export default function Contact() {
             Customized IT Services to Elevate your Business
           </h1>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="slideInLeft">
+        <ScrollAnimation animateIn="slideInLeft" duration="1.5">
           <p style={{ marginTop: "1rem", color: "#666" }}>
             Phi Dimensions is your one stop shop for technologically diverse
             solutions driven by top-notch platforms like MuleSoft, Salesforce,
@@ -82,14 +82,12 @@ export default function Contact() {
               />
             </div>
           </div>
-          <ScrollAnimation animateIn="swing">
             <h2
               style={{ fontSize: "1.25rem", fontWeight: 600, color: "#333" }}
             >
               API Development
             </h2>
-          </ScrollAnimation>
-          <ScrollAnimation animateIn="slideInLeft">
+          <ScrollAnimation animateIn="slideInLeft" duration="1.5">
             <p style={{ marginTop: "1rem", color: "#666" }}>We provide comprehensive API development <br /> services to help businesses build scalable and <br /> secure APIs. Our expert team offers end-to <br /> -end solutions for API development, from design <br /> and development to testing and deployment.</p>
           </ScrollAnimation>
           <div
@@ -142,14 +140,12 @@ export default function Contact() {
               />
             </div>
           </div>
-          <ScrollAnimation animateIn="swing">
             <h2
               style={{ fontSize: "1.25rem", fontWeight: 600, color: "#333" }}
             >
               API Developmentff
             </h2>
-          </ScrollAnimation>
-          <ScrollAnimation animateIn="slideInLeft">
+          <ScrollAnimation animateIn="slideInLeft" duration="1.5">
             <p style={{ marginTop: "1rem", color: "#666" }}>We provide comprehensive API development <br /> services to help businesses build scalable and <br /> secure APIs. Our expert team offers end-to <br /> -end solutions for API development, from design <br /> and development to testing and deployment.</p>
           </ScrollAnimation>
           <div
@@ -204,14 +200,12 @@ export default function Contact() {
               />
             </div>
           </div>
-          <ScrollAnimation animateIn="swing">
             <h2
               style={{ fontSize: "1.25rem", fontWeight: 600, color: "#333" }}
             >
               API Development
             </h2>
-          </ScrollAnimation>
-          <ScrollAnimation animateIn="slideInLeft">
+          <ScrollAnimation animateIn="slideInLeft" duration="1.5" >
             <p style={{ marginTop: "1rem", color: "#666" }}>We provide comprehensive API development <br /> services to help businesses build scalable and <br /> secure APIs. Our expert team offers end-to <br /> -end solutions for API development, from design <br /> and development to testing and deployment.</p>
           </ScrollAnimation>
           <div

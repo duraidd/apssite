@@ -21,13 +21,13 @@ export default function About() {
       </div>
      
       <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', flexWrap: 'wrap', marginTop: '20px' }} >
-      <ScrollAnimation animateIn="bounceInRight" animateOut='bounceOutRight' delay="0.8" duration="1"> 
+      <ScrollAnimation animateIn="bounceInRight" duration="2"> 
         <h1>Technologically diverse solutions <br /> with MuleSoft</h1>
         <p>Phi Dimensions is your one stop shop for technologically diverse solutions <br /> driven by top-notch platforms like MuleSoft , Salesforce, API (Application <br /> Programming Interface).</p>
         <p>As the business world continues to evolve, companies are faced with <br /> challenges they must navigate through the power of technology. If you don’t <br /> act at the right time, chances are you’ll be left behind. To ensure this never <br /> happens, we help you manage reliable technology integrations based on our <br /> tried and tested strategies.</p>
         </ScrollAnimation>
 
-        <ScrollAnimation animateIn="bounceInDown" animateOut='bounceOutDown'> 
+        <ScrollAnimation animateIn="pulse" > 
         <div style={{ width: '100%', backgroundColor: '#f7f7f7', borderRadius: '10px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)', padding: '10px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', textAlign: 'center' }}>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' ,marginRight:'10px' }}>
