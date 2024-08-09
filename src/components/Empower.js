@@ -34,7 +34,9 @@ function Empower() {
                         justifyContent:'space-between',
                         backgroundColor:'red',
                         width:'100%',
-                        padding:'5%'                        
+                        padding:'2%',
+                        flexWrap:"wrap",
+                        gap:"20px"                        
                     }}>
                         <div style={{
                             backgroundColor: '#fff',
