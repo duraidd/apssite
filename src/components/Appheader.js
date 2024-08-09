@@ -6,7 +6,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-
+import Logoimg from '../asset/Logo.jpg'
 import { List } from "@mui/material";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -16,7 +16,6 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useState } from "react";
 
 const drawerWidth = 240;
 const navItems = [
@@ -97,13 +96,17 @@ function Appheader(props) {
           >
             <MenuIcon style={{color:"red"}} />
           </IconButton>
-          <Typography
+          {/* <Typography
             variant="h6"
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" },color:"black" }}
           >
             APS Technologies pvt ltd
-          </Typography>
+          </Typography> */}
+          <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "block" },color:"black" ,paddingTop:'8px'}}>
+          <img src={Logoimg} alt="logo"   width={'250px'} height={'50px'} />
+          </Box>
+          
           <Box sx={{ display: { xs: "none", sm: "block"}}}>
             {navItems.map((item) => (
               <Button
