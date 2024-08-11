@@ -12,6 +12,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import Box from "@mui/material/Box";
 import Empower from "./Empower";
 import Discuss from "./Discuss";
+import Timepage from "./Timepage";
 
 
 
@@ -48,6 +49,7 @@ export default function Home() {
       <Experirnce />
       <Empower/>
       <Discuss/>
+      <Timepage/>
 
       <Box sx={{
         position: 'fixed',

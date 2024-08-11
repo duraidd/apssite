@@ -15,10 +15,7 @@ import "./../App.css"
 
 function Custcard() {
     return (
-        <div style={{ display: 'flex', flexDirection: "column", paddingTop: "40px", paddingBottom: "40px", overflow: 'hidden' }} >
-
-
-
+        <div style={{ display: 'flex', flexDirection: "column", padding:"10%", overflow: 'hidden' }} >
 
             <div style={{ textAlign: "center", paddingLeft: "20px", paddingRight: "20px" }}>
                 <ScrollAnimation animateIn="slideInRight" duration="1.5">
