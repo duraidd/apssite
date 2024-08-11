@@ -1,73 +1,41 @@
 import React from 'react'
 import { Chrono } from 'react-chrono';
-import '../App.css';
+import '../Cont.css';
 
 function Timepage() {
 
 
-    const items = [
-          {
-    title: "January",
-    cardTitle: "First month of the year",
-    cardSubtitle: "Subtitle for January",
-    cardDetailedText: "Some details about January",
-  },
-        { title: 'Timeline title 2', cardTitle: 'Card Title 2' },
-          {
-    title: "January",
-    cardTitle: "First month of the year",
-    cardSubtitle: "Subtitle for January",
-    cardDetailedText: "Some details about January",
-  },
-        { title: 'Timeline title 2', cardTitle: 'Card Title 2' },
-       
-    ];
 
     return (
-        <div style={{ width: '100%',padding:"10%" }} >
-            <Chrono items={items} mode="HORIZONTAL"  itemWidth={400} disableNavOnKey disableToolbar  cardHeight={300} cardWidth={300} timelinePointDimension={30} showAllCardsHorizontal theme={{
-                primary: "grey",
-                secondary: "grey",
-                cardBgColor: "yellow",
-                cardForeColor: "red",
-                titleColor: "black",
-                titleColorActive: "black",
-                iconBackgroundColor:"white",
-                cardBorderColor:"red",
-                cardTitleColor:"orange"            
-            }} >
-                <div className="chrono-icons">
-                    <img
-                        src="https://img.icons8.com/ios-filled/100/000000/twitter.png"
-                        alt="twitter"
-                        style={{ marginTop: "20px" ,backgroundColor:"white" }}
-                    />
-                    <img
-                        src="https://img.icons8.com/ios-filled/100/000000/about.png"
-                        alt="twitter"
-                    />
-                    <img
-                        src="https://img.icons8.com/ios-filled/100/000000/contacts.png"
-                        alt="twitter"
-                    />
-                    <img
-                        src="https://img.icons8.com/ios-filled/100/000000/briefcase.png"
-                        alt="twitter"
-                    />
-                    <img
-                        src="https://img.icons8.com/ios-filled/100/000000/idea.png"
-                        alt="twitter"
-                    />
-                    <img
-                        src="https://img.icons8.com/ios-filled/100/000000/sun.png"
-                        alt="twitter"
-                    />
-                    <img
-                        src="https://img.icons8.com/ios-filled/100/000000/info.png"
-                        alt="twitter"
-                    />
+        <div style={{ width: '100%' }} >
+
+            <div class="container">
+                <div class="form-container">
+                    <h2>Get In touch</h2>
+                    <form style={{display: 'flex' ,flexDirection: 'column', gap: '16px', width: '100%',  margin: 'auto', padding: '16px'}}>
+                        <input type="text" style={{width: '100%', padding: '12px', borderRadius: '4px', border: '1px solid #dcdcdc'}} placeholder="Your Name" />
+
+                        <div style={{position: 'relative', width: '100%'}}>
+                            <input type="email" style={{width: '100%', padding: '12px', borderRadius: '4px', border: '1px solid #dcdcdc'}} placeholder="Enter your Email Address" />
+                            <span style={{position: 'absolute', top: '3px', right: '12px', color: '#9e9e9e', fontSize: '24px'}}>&#9993;</span>
+                        </div>
+
+                        <input type="text" style={{width: '100%', padding: '12px', borderRadius: '4px', border: '1px solid #dcdcdc'}} placeholder="Enter Your Subject" />
+
+                        <textarea style={{width: '100%', padding: '12px', borderRadius: '4px', border: '1px solid #dcdcdc'}} placeholder="Enter Your Message" rows="5"></textarea>
+
+                        <button style={{backgroundColor: '#007bff', color: 'white', padding: '12px', border: '4px', border: 'none', cursor: 'pointer', marginTop: '16px', width: '100%'}}>Contact us</button>
+                    </form>
+
                 </div>
-            </Chrono>
+                <div class="image-container">
+                    <img src="https://tools-api.webcrumbs.org/image-placeholder/300/400/people/1" alt="Group of people" />
+                    <div class="overlay">
+                        <span>%</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     )
 }
