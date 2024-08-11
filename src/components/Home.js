@@ -11,6 +11,7 @@ import Experirnce from "./Experirnce";
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import Box from "@mui/material/Box";
 import Empower from "./Empower";
+import Discuss from "./Discuss";
 
 
 
@@ -46,6 +47,7 @@ export default function Home() {
       <Custcard />
       <Experirnce />
       <Empower/>
+      <Discuss/>
 
       <Box sx={{
         position: 'fixed',
