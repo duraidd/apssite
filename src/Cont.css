@@ -75,10 +75,72 @@
     background-color: white;
     border-radius: 50%;
     top: 35%;
-    right: 25%;
+    right: 24%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 2px dotted #007bff;
   }
+
+
+@media(max-width: 425px){
+  .image-container .overlay {
+    display: none;
+  }
+}
+
+
+@media(max-width: 768px){
+  .image-container .overlay {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    top: 25%;
+    right: 10%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px dotted #007bff;
+  }
+}
+
+@media(max-width: 1440px){
+  .image-container .overlay {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    top: 25%;
+    right: 20%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px dotted #007bff;
+  }
+}
+
+
+@media(max-width: 1024px){
+  .image-container .overlay {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    top: 25%;
+    right: 10%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px dotted #007bff;
+  }
+}
+
+
 
   .image-container .overlay span {
     color: #007bff;
@@ -93,7 +155,7 @@
 
 
   @media (max-width: 425px) {
-    .img-style {
+    .image-container {
         display: none;
     }
   }

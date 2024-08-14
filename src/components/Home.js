@@ -14,6 +14,7 @@ import Empower from "./Empower";
 import Discuss from "./Discuss";
 import Timepage from "./Timepage";
 import Footer from "./Footer";
+import Flag from "./Flag";
 
 
 
@@ -50,6 +51,7 @@ export default function Home() {
       <Experirnce />
       <Empower />
       <Discuss />
+      <Flag/>
       <Timepage />
       <Footer />
 
@@ -59,7 +61,7 @@ export default function Home() {
         right: 10,
         zIndex: 999
       }} >
-        <a href="https://wa.me/919702470579" target="_blank">
+        <a href="https://wa.me/917305395976" target="_blank">
           <IconButton sx={{
             '&:hover': {
               backgroundColor: "#E0FBE2"

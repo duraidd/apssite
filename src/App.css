@@ -153,3 +153,114 @@
 }
 
 
+/* General Container Styling */
+.services-3 {
+  margin: 0 auto; /* Center the content horizontally */
+  padding: 0 20px; /* Adjust padding for smaller screens */
+  max-width: 1240px; /* Ensure it doesn't exceed a certain width */
+  box-sizing: border-box;
+}
+
+/* Group Styling */
+.group-1000007397 {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Line Styling */
+.line-12 {
+  opacity: 0.4;
+  background: #2F4858;
+  width: 100%;
+  height: 1px;
+  margin-top: 84px;
+}
+
+/* Individual Item Styling */
+.group-1000007391, .group-1000007392, .group-1000007393, .group-1000007394 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px; /* Adds space between items */
+  box-sizing: border-box;
+  max-width: 300px; /* Adjusts width for responsiveness */
+}
+
+/* Container Number */
+.container-5, .container-6, .container-7, .container-8 {
+  margin-bottom: 4.5px;
+  font-family: 'Fraunces', sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 1.28;
+}
+
+/* Container Number Colors */
+.container-5 { color: #FF2A53; }
+.container-6 { color: #00CA00; }
+.container-7 { color: #9747FF; }
+.container-8 { color: #3689FE; }
+
+/* Animated Icon Styling */
+.animated-icon {
+  transform: rotate(-44deg);
+  width: 21px;
+  height: 21px;
+  margin-bottom: 30px;
+}
+
+/* Title Styling */
+.integration-solutions, .event-driven-architecture, .hybrid-integration, .api-development-management {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+  color: #2F4858;
+  margin-bottom: 15px;
+}
+
+/* Description Text */
+.description {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.875;
+  color: #2F4858;
+}
+
+/* Arrow Icon Styling */
+.arrow-icon {
+  display: flex; /* Ensure the arrow aligns properly */
+  align-items: center; /* Center the arrow vertically */
+  width: 24px; /* Adjust size if necessary */
+  height: 24px; /* Adjust size if necessary */
+  cursor: pointer; /* Indicates it's clickable */
+  margin-top: 10px; /* Adjust spacing if necessary */
+  fill: #2F4858; /* Adjust color if necessary */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-3 {
+    margin: 0 10px;
+    padding: 0;
+  }
+
+  .group-1000007399 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .group-1000007397 {
+    flex-direction: column;
+  }
+
+  .group-1000007391, .group-1000007392, .group-1000007393, .group-1000007394 {
+    max-width: 100%;
+  }
+}
+
+
