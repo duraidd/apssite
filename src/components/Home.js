@@ -13,6 +13,7 @@ import Box from "@mui/material/Box";
 import Empower from "./Empower";
 import Discuss from "./Discuss";
 import Timepage from "./Timepage";
+import Footer from "./Footer";
 
 
 
@@ -47,9 +48,10 @@ export default function Home() {
       <Contact />
       <Custcard />
       <Experirnce />
-      <Empower/>
-      <Discuss/>
-      <Timepage/>
+      <Empower />
+      <Discuss />
+      <Timepage />
+      <Footer />
 
       <Box sx={{
         position: 'fixed',
