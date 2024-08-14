@@ -29,7 +29,7 @@ function Timepage() {
 
                 </div>
                 <div class="image-container">
-                    <img src="https://tools-api.webcrumbs.org/image-placeholder/300/400/people/1" alt="Group of people" />
+                    <img class="img-style"  src="https://tools-api.webcrumbs.org/image-placeholder/300/400/people/1" alt="Group of people" />
                     <div class="overlay">
                         <span>%</span>
                     </div>
