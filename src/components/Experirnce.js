@@ -1,5 +1,6 @@
 import { Box } from '@mui/material'
 import React from 'react'
+import Img1 from '../asset/impress.jpg'
 
 function Experirnce() {
     return (
@@ -36,7 +37,7 @@ function Experirnce() {
                     },
                 }} >                    
                       
-                    <img style={{ width: '50%', height: '450px', objectFit: 'cover', borderRadius: '100%',border:'10px dashed red' ,padding:"20px" }} src="https://tools-api.webcrumbs.org/image-placeholder/350/350/office/1" alt="Office scene" />
+                    <img style={{ width: '46%', height: '450px', objectFit: 'cover', borderRadius: '100%',border:'10px dashed red' ,padding:"20px" }} src={Img1} alt="Office scene" />
 
 
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: 'rgba(51, 122, 183, 0.1)', padding: '6px', borderRadius: '10px' }}>
