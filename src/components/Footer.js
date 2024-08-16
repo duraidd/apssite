@@ -16,9 +16,11 @@ function Footer() {
                 <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "25px" }}>
                     <Box><p>Find Us Here</p></Box>
                     <Box sx={{ display: "flex", flexDirection: "row", gap: "10px" }} >
-                        <img src={Face} height={24} width={24} style={{ cursor: "pointer" }} />
+                        <a href='https://www.facebook.com/people/Aps-Techh/pfbid02yEy6wg1TQKCJVE9ZeuRV1QbnFMj2VfFt22QFeFLAUQU2HFhVodPU36ijNe3eNx3nl/?mibextid=ZbWKwL' target='_blank' ><img src={Face} height={24} width={24} style={{ cursor: "pointer" }} /></a>
                         <img src={Twit} height={24} width={24} style={{ cursor: "pointer" }} />
-                        <img src={Insta} height={24} width={24} style={{ cursor: "pointer" }} />
+                        <a href='https://www.instagram.com/aps_technologies.tvl/?igsh=NmZ1bm14ZDZweHMz' target='_blank'>
+                            <img src={Insta} height={24} width={24} style={{ cursor: "pointer" }} />
+                        </a>
                         <img src={LinkedIn} height={24} width={24} style={{ cursor: "pointer" }} />
                     </Box>
                 </Box>
@@ -34,7 +36,7 @@ function Footer() {
                     <p>+91 7305395976</p>
                 </Box>
                 <Box>
-                <h3 style={{ marginBottom: "20px" }} >Quick Link</h3>
+                    <h3 style={{ marginBottom: "20px" }} >Quick Link</h3>
                     <p style={{ marginBottom: "20px" }} >Home</p>
                     <p style={{ marginBottom: "20px" }} >About Us</p>
                     <p style={{ marginBottom: "20px" }} >Contact Us</p>
@@ -53,7 +55,7 @@ function Footer() {
                     <p style={{ marginBottom: "20px" }} >Our Services</p>
                     <p style={{ marginBottom: "20px" }} >Careers</p>
                     <p style={{ marginBottom: "20px" }} >Privacy Policy</p>
-                   
+
                 </Box>
             </Box>
             <Divider />
