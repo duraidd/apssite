@@ -1,9 +1,10 @@
 import React from "react";
 import Appheader from "./Appheader";
 import { Button, IconButton } from "@mui/material";
-import Img1 from "../asset/api.png";
-import Img2 from "../asset/sal.png";
-import Img3 from "../asset/mul.png";
+import Img1 from "../asset/pix1.jpg";
+import Img2 from "../asset/pix2.jpg";
+import Img3 from "../asset/pix3.jpg";
+import Img4 from "../asset/pix4.jpg";
 import EmojiObjectsOutlinedIcon from '@mui/icons-material/EmojiObjectsOutlined';
 import MarkUnreadChatAltOutlinedIcon from '@mui/icons-material/MarkUnreadChatAltOutlined';
 import PhoneInTalkOutlinedIcon from '@mui/icons-material/PhoneInTalkOutlined';
@@ -43,7 +44,7 @@ function Custcard() {
                 <div class="grid-container">
                     <div class="full-width">
                         <div class="card">
-                            <img src="https://tools-api.webcrumbs.org/image-placeholder/480/320/technology/1" alt="IT Strategy and Planning" />
+                            <img src={Img1} alt="IT Strategy and Planning" />
                             <div class="card-content">
                                 <i class="card-icon">{<EmojiObjectsOutlinedIcon style={{ fontSize: "50px" }} />}</i>
                                 <h2 class="card-title">IT Strategy and Planning</h2>
@@ -52,7 +53,7 @@ function Custcard() {
                         </div>
                     </div>
                     <div class="card">
-                        <img src="https://tools-api.webcrumbs.org/image-placeholder/480/320/technology/2" alt="IT Consultation" />
+                        <img src={Img2} alt="IT Consultation" />
                         <div class="card-content">
                             <i class="card-icon">{<MarkUnreadChatAltOutlinedIcon style={{ fontSize: "50px" }} />}</i>
                             <h2 class="card-title">IT Consultation</h2>
@@ -60,7 +61,7 @@ function Custcard() {
                         </div>
                     </div>
                     <div class="card">
-                        <img src="https://tools-api.webcrumbs.org/image-placeholder/480/320/technology/3" alt="24/7 Customer Support" />
+                        <img src={Img3} alt="24/7 Customer Support" />
                         <div class="card-content">
                             <i class="card-icon"><PhoneInTalkOutlinedIcon style={{ fontSize: "50px" }} /></i>
                             <h2 class="card-title">24/7 Customer Support</h2>
@@ -69,7 +70,7 @@ function Custcard() {
                     </div>
                     <div class="full-width">
                         <div class="card">
-                            <img src="https://tools-api.webcrumbs.org/image-placeholder/960/320/technology/4" alt="Digital Transformation" />
+                            <img src={Img4} alt="Digital Transformation" />
                             <div class="card-content">
                                 <i class="card-icon"><HubOutlinedIcon style={{ fontSize: "50px" }} /></i>
                                 <h2 class="card-title">Digital Transformation</h2>
