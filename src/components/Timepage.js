@@ -9,18 +9,26 @@ function Timepage() {
 
     const [first, setfirst] = useState({ name: "", email: "", subject: "", message: "" });
 
+    const [loader, setLoader] = useState(false);
+
     const handleSend = async (e) => {
         e.preventDefault();
 
         console.log("FFFF", first);
 
-      const response =  await axios.post("https://apsback.vercel.app/aps/send",first);
+        setLoader(true)
 
-      toast.success(response.data.message,{autoClose: 3000})
+        const response = await axios.post("https://apsback.vercel.app/aps/send", first);
 
-      setTimeout(()=>{
-        setfirst({ name: "", email: "", subject: "", message: "" })
-      },1000)
+        toast.success(response.data.message, { autoClose: 3000 })
+
+        setTimeout(() => {
+            setfirst({ name: "", email: "", subject: "", message: "" })
+        }, 1000)
+
+        if (response) {
+            setLoader(false)
+        }
 
 
     }
@@ -31,7 +39,7 @@ function Timepage() {
             <div class="container">
                 <div class="form-container">
                     <h2>Get In touch</h2>
-                    <form onSubmit={(e)=>handleSend(e)} style={{ display: 'flex', flexDirection: 'column', gap: '16px', width: '100%', margin: 'auto', padding: '16px' }}>
+                    <form onSubmit={(e) => handleSend(e)} style={{ display: 'flex', flexDirection: 'column', gap: '16px', width: '100%', margin: 'auto', padding: '16px' }}>
                         <input type="text" style={{ width: '100%', padding: '12px', borderRadius: '4px', border: '1px solid #dcdcdc' }} placeholder="Your Name" required value={first.name} onChange={(e) => setfirst({ ...first, name: e.target.value })} />
 
                         <div style={{ position: 'relative', width: '100%' }}>
@@ -43,7 +51,7 @@ function Timepage() {
 
                         <textarea style={{ width: '100%', padding: '12px', borderRadius: '4px', border: '1px solid #dcdcdc' }} placeholder="Enter Your Message" rows="5" required value={first.message} onChange={(e) => setfirst({ ...first, message: e.target.value })} ></textarea>
 
-                        <button  style={{ backgroundColor: '#007bff', color: 'white', padding: '12px', border: '4px', border: 'none', cursor: 'pointer', marginTop: '16px', width: '100%' }}>Contact us</button>
+                        <button disabled={loader} style={{ backgroundColor: '#007bff', color: 'white', padding: '12px', border: '4px', border: 'none', cursor: 'pointer', marginTop: '16px', width: '100%' }}>{ !loader ? "Contact us" : "Loading"}</button>
                     </form>
 
                 </div>
