@@ -12,18 +12,18 @@ function Experirnce() {
             padding: '10px',
             width: '100%',
             margin: '0 auto',
-            padding: '5%  10%  5%  10%'
+            padding: '5%  8%  5%  8%'
 
         }}>
             <Box sx={{
                 display: 'flex',
                 flexDirection: 'row',
                 alignItems: 'center',
-                gap: '8px',
+                gap: '8px',                
                 justifyContent: 'space-between',
                 '@media (max-width: 768px)': {
                     flexWrap: 'wrap',
-                }
+                }             
             }}>
                 <Box sx={{
                     display: 'flex',
@@ -35,6 +35,7 @@ function Experirnce() {
                     '@media (max-width: 425px)': {
                         display: 'none',
                     },
+                    
                 }} >                    
                       
                     <img style={{ width: '46%', height: '450px', objectFit: 'cover', borderRadius: '100%',border:'10px dashed red' ,padding:"20px" }} src={Img1} alt="Office scene" />

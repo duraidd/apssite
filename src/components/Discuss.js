@@ -28,7 +28,7 @@ function Discuss(props) {
                         display: 'none',
                     }
                 }}>
-                    <img src={Img2} alt="Profile" width="240" height="250" style={{ objectFit: "cover", borderRadius: "50%", border: "2px dashed red", padding: "10px" }} />
+                    <img src={Img2} alt="Profile" width="240" height="300" style={{ objectFit: "cover", borderRadius: "50%", border: "2px dashed red", padding: "10px" }} />
                 </Box>
                 <Box sx={{ border: "1px solid #FF2A53", padding: "2rem", borderRadius: "10px", "&:hover": { boxShadow: "8px 12px 12px #f8a6b6" } }} >
                     <h3 style={{ color: "#FF2A53" }}>At MuleSoft IT Services, we thrive on challenges and <br /> are passionate about delivering exceptional results.</h3>
