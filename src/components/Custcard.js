@@ -40,7 +40,7 @@ function Custcard() {
             </div>
 
 
-            <div class="container">               
+            <div class="container1">               
                 <div class="grid-container">
                     <div class="full-width">
                         <div class="card">
