@@ -77,7 +77,7 @@ function Appheader(props) {
           <ListItem key={item.name} disablePadding>
             <ListItemButton
               sx={{ textAlign: "center" }}
-              onClick={() => handleNav(item.name)}
+              onClick={() => handleNav(item)}
             >
               <ListItemText primary={item.name} />
             </ListItemButton>
