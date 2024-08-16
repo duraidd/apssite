@@ -5,7 +5,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 export default function About() {
   return (
-    <div style={{overflow:'hidden', display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: 'space-evenly', width: "100%", padding: "5% 10% 5% 10%", background: `linear-gradient(162deg, rgba(255,255,255,1) 0%, rgba(253,248,253,1) 5%, rgba(237,179,235,0.8743872549019608) 45%, rgba(230,164,228,0.6362920168067228) 100%)` }}>
+    <div style={{overflow:'hidden', display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: 'space-evenly', width: "100vw", padding: "5% 10% 5% 10%", background: `linear-gradient(162deg, rgba(255,255,255,1) 0%, rgba(253,248,253,1) 5%, rgba(237,179,235,0.8743872549019608) 45%, rgba(230,164,228,0.6362920168067228) 100%)` }}>
       
       <div style={{ border: "10px solid red", position: "relative", borderRadius: "5%" }} className="animate_animated animate__backInLeft" >      
         <img
