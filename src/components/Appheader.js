@@ -16,12 +16,13 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const drawerWidth = 240;
 const navItems = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Contact", path: "/contact" },
+  { name: "Home", path: "/", section: 'home' },
+  { name: "About", path: "/about", section: 'about' },
+  { name: "Contact", path: "/contact", section: 'contact' },
 ];
 
 function Appheader(props) {
@@ -35,23 +36,35 @@ function Appheader(props) {
 
   const navigate = useNavigate();
 
+
+
+  const [data, setData] = useState("home");
+
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
 
   const handleNav = (data) => {
-    if (data === "Home") {
-      navigate("/");
+    if (data.name === "Home") {
+      props.passChildData(data.section);
+      // navigate("/");
+      setData(data.section)
     }
 
-    if (data === "About") {
-      navigate("/about");
+    if (data.name === "About") {
+      props.passChildData(data.section);
+      setData(data.section)
+      // navigate("/about");
     }
 
-    if (data === "Contact") {
-      navigate("/contact");
+    if (data.name === "Contact") {
+      props.passChildData(data.section);
+      setData(data.section)
+      // navigate("/contact");
     }
   };
+
+  console.log("data",data);
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
@@ -83,7 +96,7 @@ function Appheader(props) {
       <AppBar
         component="nav"
         sx={{
-          backgroundColor: "white"         
+          backgroundColor: "white"
         }}
       >
         <Toolbar>
@@ -92,9 +105,9 @@ function Appheader(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" }}}
+            sx={{ mr: 2, display: { sm: "none" } }}
           >
-            <MenuIcon style={{color:"red"}} />
+            <MenuIcon style={{ color: "red" }} />
           </IconButton>
           {/* <Typography
             variant="h6"
@@ -103,23 +116,23 @@ function Appheader(props) {
           >
             APS Technologies pvt ltd
           </Typography> */}
-          <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "block" },color:"black" ,paddingTop:'8px'}}>
-          <img src={Logoimg} alt="logo"   width={'250px'} height={'50px'} />
+          <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "block" }, color: "black", paddingTop: '8px' }}>
+            <img src={Logoimg} alt="logo" width={'250px'} height={'50px'} />
           </Box>
-          
-          <Box sx={{ display: { xs: "none", sm: "block"}}}>
+
+          <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Button
                 key={item.name}
                 sx={{
-                  color: item.path === pathname ? "white" : "black",
-                  fontSize:"1rem",
-                  fontFamily:"Lato",
-                  backgroundColor: item.path === pathname ? "#2F4858" : "",
+                  color: item.section === data ? "white" : "black",
+                  fontSize: "1rem",
+                  fontFamily: "Lato",
+                  backgroundColor: item.section === data ? "#2F4858" : "",
                   "&:hover": { backgroundColor: "#2F4858" },
-                  marginRight:{sm:0 ,lg:10}
+                  marginRight: { sm: 0, lg: 10 }
                 }}
-                onClick={() => handleNav(item.name)}
+                onClick={() => handleNav(item)}
               >
                 {item.name}
               </Button>

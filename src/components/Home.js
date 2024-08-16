@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Appheader from "./Appheader";
 import Imah from "../asset/Banner.jpg";
 import "./../App.css"
@@ -19,6 +19,48 @@ import Flag from "./Flag";
 
 
 export default function Home() {
+
+
+
+  const about = useRef();
+  const home = useRef();
+  const discuss = useRef();
+  const contact = useRef();
+
+
+  const [first, setfirst] = useState("")
+
+ 
+
+
+  useEffect(() => {
+
+    console.log("first", first);
+
+    if (first === "about") {
+      window.scrollTo({ top: about.current.offsetTop, behavior: "smooth" });
+    }
+
+    if (first === "home") {
+      window.scrollTo({ top: home.current.offsetTop, behavior: "smooth" });
+    }
+
+    if (first === "contact") {
+      window.scrollTo({ top: discuss.current.offsetTop, behavior: "smooth" });
+    }
+
+    if (first === "contactform") {
+      window.scrollTo({ top: contact.current.offsetTop, behavior: "smooth" });
+    }
+
+  }, [first])
+
+
+
+  
+
+
+
   return (
     <div
       style={{
@@ -28,8 +70,8 @@ export default function Home() {
         alignItems: "center"
       }}
     >
-      <Appheader />
-      <div className="saple"
+      <Appheader passChildData={setfirst} />
+      <div ref={home} className="saple"
         style={{
           backgroundImage: `url(${Imah})`, marginTop: "40px", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", width: '100%'
         }}
@@ -45,14 +87,17 @@ export default function Home() {
         </div>
 
       </div>
-      <About />
+      <div ref={about}><About /></div>
+
       <Contact />
       <Custcard />
       <Experirnce />
       <Empower />
-      <Discuss />
-      <Flag/>
+      <div ref={discuss} ><Discuss passData={setfirst} /></div>
+      <Flag />
+      <div style={{width:'100%'}} ref={contact} >
       <Timepage />
+      </div>      
       <Footer />
 
       <Box sx={{
