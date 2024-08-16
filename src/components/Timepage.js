@@ -3,6 +3,7 @@ import '../Cont.css';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Img1 from '../asset/cont.jpg'
 
 function Timepage() {
 
@@ -47,7 +48,7 @@ function Timepage() {
 
                 </div>
                 <div class="image-container">
-                    <img class="img-style" src="https://tools-api.webcrumbs.org/image-placeholder/300/400/people/1" alt="Group of people" />
+                    <img class="img-style" src={Img1} alt="Group of people" />
                     <div class="overlay">
                         <span>%</span>
                     </div>
