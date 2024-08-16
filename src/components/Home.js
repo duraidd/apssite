@@ -26,17 +26,12 @@ export default function Home() {
   const home = useRef();
   const discuss = useRef();
   const contact = useRef();
+  const [first, setfirst] = useState("");
+  const [second, setsecond] = useState("");
 
-
-  const [first, setfirst] = useState("")
-
- 
 
 
   useEffect(() => {
-
-    console.log("first", first);
-
     if (first === "about") {
       window.scrollTo({ top: about.current.offsetTop, behavior: "smooth" });
     }
@@ -56,11 +51,6 @@ export default function Home() {
   }, [first])
 
 
-
-  
-
-
-
   return (
     <div
       style={{
@@ -68,10 +58,10 @@ export default function Home() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        overflow:"hidden"
+        overflow: "hidden"
       }}
     >
-      <Appheader passChildData={setfirst} />
+      <Appheader passChildData={setfirst} addData={second} />
       <div ref={home} className="saple"
         style={{
           backgroundImage: `url(${Imah})`, marginTop: "40px", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", width: '100%'
@@ -96,11 +86,10 @@ export default function Home() {
       <Empower />
       <div ref={discuss} ><Discuss passData={setfirst} /></div>
       <Flag />
-      <div style={{width:'100%'}} ref={contact} >
-      <Timepage />
-      </div>      
-      <Footer />
-
+      <div style={{ width: '100%' }} ref={contact} >
+        <Timepage />
+      </div>
+      <Footer passFooter={setfirst} fn={setsecond} />
       <Box sx={{
         position: 'fixed',
         bottom: 10,

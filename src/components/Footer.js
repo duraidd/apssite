@@ -5,10 +5,23 @@ import Face from '../asset/Facebook.png'
 import Twit from '../asset/Twitter.png'
 import Insta from '../asset/Instagram.png'
 import LinkedIn from '../asset/LinkedIn.png'
+import styled from 'styled-components';
 
+const P = styled.p`
+  margin-bottom: 20px;
+  cursor: pointer;
+  &:hover {
+    color: red;
+  }
+`;
 
+function Footer(props) {
 
-function Footer() {
+    const handleFoot = (data) => {
+        props.passFooter(data);
+        props.fn(data)
+    }
+
     return (
         <div style={{ width: "100%", padding: "5% 10%" }} >
             <Box sx={{ display: "flex", flexDirection: "row", justifyContent: "space-between", flexWrap: "wrap" }}>
@@ -37,9 +50,9 @@ function Footer() {
                 </Box>
                 <Box>
                     <h3 style={{ marginBottom: "20px" }} >Quick Link</h3>
-                    <p style={{ marginBottom: "20px" }} >Home</p>
-                    <p style={{ marginBottom: "20px" }} >About Us</p>
-                    <p style={{ marginBottom: "20px" }} >Contact Us</p>
+                    <P onClick={() => handleFoot("home")} >Home</P>
+                    <P onClick={() => handleFoot("about")} >About Us</P>
+                    <P onClick={() => handleFoot("contact")} >Contact Us</P>
                     <p style={{ marginBottom: "20px" }} >Blog</p>
 
                 </Box>

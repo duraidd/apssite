@@ -15,8 +15,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { useLocation, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const drawerWidth = 240;
 const navItems = [
@@ -26,23 +25,16 @@ const navItems = [
 ];
 
 function Appheader(props) {
+
   const { window } = props;
-
-  const { pathname } = useLocation();
-
-  console.log(pathname, "pathname");
-
   const [mobileOpen, setMobileOpen] = React.useState(false);
-
-  const navigate = useNavigate();
-
-
-
   const [data, setData] = useState("home");
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+
+
 
   const handleNav = (data) => {
     if (data.name === "Home") {
@@ -50,7 +42,6 @@ function Appheader(props) {
       // navigate("/");
       setData(data.section)
     }
-
     if (data.name === "About") {
       props.passChildData(data.section);
       setData(data.section)
@@ -64,7 +55,13 @@ function Appheader(props) {
     }
   };
 
-  console.log("data",data);
+  useEffect(() => {
+    if (props.addData) {
+      setData(props.addData)
+    }
+  }, [props.addData])
+
+
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
