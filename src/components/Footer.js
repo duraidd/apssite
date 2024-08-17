@@ -44,9 +44,9 @@ function Footer(props) {
                 <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: "wrap", justifyContent: "space-between" }}>
                     <Box>
                         <h3 style={{ marginBottom: "20px" }} >Office</h3>
-                        <p style={{ marginBottom: "20px" }} >Germany — <br />
-                            05475 15h Street, Office 458 <br />
-                            Berlin, De 81546</p>
+                        <p style={{ marginBottom: "20px" }} >23/C, First floor,<br />
+                            Raja Rajeshwari Nagar south Street <br />
+                            NGO B colony <br />Tirunelveli 627007</p>
 
                         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=apstechnologiestvl@gmail.com">apstechnologiestvl@gmail.com</a>
                         <p>+91 7305395976</p>
@@ -74,8 +74,8 @@ function Footer(props) {
 
                     </Box>
                 </Box>
-                <Divider />            
-            <p>Copyright©2024 APS Technologies Pvt Ltd, All rights reserved</p>
+                <Divider />
+                <p>Copyright©2024 APS Technologies Pvt Ltd, All rights reserved</p>
             </ScrollAnimation>
         </div>
     )
