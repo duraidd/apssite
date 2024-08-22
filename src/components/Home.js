@@ -15,6 +15,8 @@ import Discuss from "./Discuss";
 import Timepage from "./Timepage";
 import Footer from "./Footer";
 import Flag from "./Flag";
+import { ScrollToTop } from "react-simple-scroll-up";
+
 
 
 
@@ -61,6 +63,11 @@ export default function Home() {
         overflow: "hidden"
       }}
     >
+      
+      <ScrollToTop bgColor="#ff0400" symbol="&#8593;" strokeFillColor="white" style={{zIndex: 999}}/>
+      
+      
+
       <Appheader passChildData={setfirst} addData={second} />
       <div ref={home} className="saple"
         style={{
@@ -92,7 +99,7 @@ export default function Home() {
       <Footer passFooter={setfirst} fn={setsecond} />
       <Box sx={{
         position: 'fixed',
-        bottom: 10,
+        bottom: 80,
         right: 10,
         zIndex: 999
       }} >
