@@ -10,6 +10,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 
 const P = styled.p`
+  color:black;
   margin-bottom: 20px;
   cursor: pointer;
   &:hover {
@@ -44,7 +45,7 @@ function Footer(props) {
                 <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: "wrap", justifyContent: "space-between" }}>
                     <Box>
                         <h3 style={{ marginBottom: "20px" }} >Office</h3>
-                        <p style={{ marginBottom: "20px" }} >23/C, First floor,<br />
+                        <p style={{ marginBottom: "20px" ,color:'black'}} >23/C, First floor,<br />
                             Raja Rajeshwari Nagar south Street <br />
                             NGO B colony <br />Tirunelveli 627007</p>
 
@@ -56,26 +57,26 @@ function Footer(props) {
                         <P onClick={() => handleFoot("home")} >Home</P>
                         <P onClick={() => handleFoot("about")} >About Us</P>
                         <P onClick={() => handleFoot("contact")} >Contact Us</P>
-                        <p style={{ marginBottom: "20px" }} >Blog</p>
+                        <p style={{ marginBottom: "20px" ,color:'black'}} >Blog</p>
 
                     </Box>
                     <Box>
                         <h3 style={{ marginBottom: "20px" }} >Services</h3>
-                        <p style={{ marginBottom: "20px" }} >API Development</p>
-                        <p style={{ marginBottom: "20px" }} >Mule Soft</p>
-                        <p style={{ marginBottom: "20px" }} >Sales force</p>
+                        <p style={{ marginBottom: "20px",color:'black' }} >API Development</p>
+                        <p style={{ marginBottom: "20px",color:'black' }} >Mule Soft</p>
+                        <p style={{ marginBottom: "20px",color:'black' }} >Sales force</p>
                     </Box>
                     <Box>
                         <h3 style={{ marginBottom: "20px" }} >Resources</h3>
-                        <p style={{ marginBottom: "20px" }} >Portfolio</p>
-                        <p style={{ marginBottom: "20px" }} >Our Services</p>
-                        <p style={{ marginBottom: "20px" }} >Careers</p>
-                        <p style={{ marginBottom: "20px" }} >Privacy Policy</p>
+                        <p style={{ marginBottom: "20px",color:'black' }} >Portfolio</p>
+                        <p style={{ marginBottom: "20px",color:'black' }} >Our Services</p>
+                        <p style={{ marginBottom: "20px",color:'black' }} >Careers</p>
+                        <p style={{ marginBottom: "20px",color:'black' }} >Privacy Policy</p>
 
                     </Box>
                 </Box>
                 <Divider />
-                <p>Copyright©2024 APS Technologies Pvt Ltd, All rights reserved</p>
+                <p style={{color:'black' }} >Copyright©2024 APS Technologies Pvt Ltd, All rights reserved</p>
             </ScrollAnimation>
         </div>
     )
