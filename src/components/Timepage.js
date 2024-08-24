@@ -38,7 +38,7 @@ function Timepage() {
             <ToastContainer />
             <div class="container">
                 <div class="form-container">
-                    <h2>Get In touch</h2>
+                    <h2 style={{color:'black'}} >Get In touch</h2>
                     <form onSubmit={(e) => handleSend(e)} style={{ display: 'flex', flexDirection: 'column', gap: '16px', width: '100%', margin: 'auto', padding: '16px' }}>
                         <input type="text" style={{ width: '100%', padding: '12px', borderRadius: '4px', border: '1px solid #dcdcdc' }} placeholder="Your Name" required value={first.name} onChange={(e) => setfirst({ ...first, name: e.target.value })} />
 
