@@ -1,12 +1,8 @@
 import React from 'react'
 import '../App.css'
-import Carousel from 'better-react-carousel';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
 import {Box} from '@mui/material';
+import ScrollAnimation from 'react-animate-on-scroll';
+
 
 function Flag() {
   return (
@@ -279,6 +275,8 @@ function Flag() {
     // </Carousel>
     //  </Box>
 <Box sx={{display:'flex',flexDirection:'row',justifyContent:'space-around',alignItems:'center',width:'100%',flexWrap:'wrap',padding:'20px 10px 30px 10px',gap:'20px'}} >
+
+<ScrollAnimation animateIn='jello' >
 <article class="card33">
   <img
     class="card33__background"
@@ -297,6 +295,8 @@ function Flag() {
     {/* <button class="card33__button">Read more</button> */}
   </div>
 </article>
+</ScrollAnimation>
+<ScrollAnimation animateIn='jello' >
 <article class="card33">
   <img
     class="card33__background"
@@ -315,6 +315,8 @@ function Flag() {
     {/* <button class="card33__button">Read more</button> */}
   </div>
 </article>
+</ScrollAnimation>
+<ScrollAnimation animateIn='jello' >
 <article class="card33">
   <img
     class="card33__background"
@@ -333,10 +335,12 @@ function Flag() {
     {/* <button class="card33__button">Read more</button> */}
   </div>
 </article>
+</ScrollAnimation>
+<ScrollAnimation animateIn='jello' >
 <article class="card33">
   <img
     class="card33__background"
-    src="https://i.imgur.com/QYWAcXk.jpeg"
+    src="https://www.apstechnologies.co.in/assets/images/technology/digital-marketing/digital-mar-1.jpg"
     alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
     width="1920"
     height="2193"
@@ -351,6 +355,7 @@ function Flag() {
     {/* <button class="card33__button">Read more</button> */}
   </div>
 </article>
+</ScrollAnimation>
 </Box>
   )
 }
