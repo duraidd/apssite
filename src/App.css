@@ -104,7 +104,7 @@
 }
 .card-content {
   position: relative;
-  z-index: 10;
+  /* z-index: 10; */
 }
 .card-icon {
   color: #ff0400;

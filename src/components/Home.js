@@ -76,11 +76,11 @@ export default function Home() {
       >
         <div style={{ textAlign: "center", display: "flex", flexDirection: "column", paddingLeft: "20px", paddingRight: "20px" }}>
           <ScrollAnimation animateIn="swing" >
-            <h1>MuleSoft API Development <br />
+            <h1>Software Development <br />
               From Idea to Product</h1>
           </ScrollAnimation>
           <div>
-            <Button variant="contained" sx={{ backgroundColor: "red", "&:hover": { backgroundColor: "red" } }} >Get Started</Button>
+            <Button  variant="contained" sx={{ backgroundColor: "red", "&:hover": { backgroundColor: "red" } }} >Get Started</Button>
           </div>
         </div>
 
