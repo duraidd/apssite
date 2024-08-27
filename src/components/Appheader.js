@@ -21,6 +21,7 @@ import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { useNavigate } from "react-router-dom";
 
 
 const drawerWidth = 240;
@@ -34,11 +35,11 @@ const navItems = [
 
 
 const servicesItem = [
-  { subMenuName: "UI Work", subMenuLink: "/graphic-design" },
-  { subMenuName: "Web Application", subMenuLink: "/e-content-development" },
-  { subMenuName: "Mobile Application", subMenuLink: "/short-film" },
-  { subMenuName: "Cloud Services", subMenuLink: "/short-film" },
-  { subMenuName: "Digital Marketing", subMenuLink: "/short-film" }
+  // { subMenuName: "UI Work", subMenuLink: "/ui-work" },
+  { subMenuName: "Web Application", subMenuLink: "/web-application" },
+  { subMenuName: "Mobile Application", subMenuLink: "/mobile-application" },
+  // { subMenuName: "Cloud Services", subMenuLink: "/cloud-services" },
+  // { subMenuName: "Digital Marketing", subMenuLink: "/digital-marketing" }
 
 
 
@@ -55,6 +56,7 @@ function Appheader(props) {
 
   const [mySubMenu, setMySubMenu] = useState([]);
 
+  const navigate = useNavigate();
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -62,10 +64,17 @@ function Appheader(props) {
 
 
   const handleClickSubmenu = (text, ls) => {
+    navigate(text.subMenuLink)
     setData(text.subMenuName)
     handleDrawerToggle();
     setExpanded(false);
-    console.log("text",text,"ls",ls);
+  };
+
+
+  const handleClickSubmenu1 = (text, ls) => {
+    navigate(text.subMenuLink)
+    setData(text.subMenuName)
+    setExpanded(false);
   };
 
 
@@ -75,35 +84,42 @@ function Appheader(props) {
 
 
   const handleNav = (data) => {
-    if (data.name === "Home") {
-      props.passChildData(data.section);
-      // navigate("/");
-      setData(data.section)
-      handleDrawerToggle();
-      setExpanded(false);
 
-    }
-    if (data.name === "About") {
-      props.passChildData(data.section);
-      setData(data.section)
-      // navigate("/about");
-      handleDrawerToggle();
-      setExpanded(false);
+    if(data.path)
+
+    navigate("/", { state: { section: data.section } });
 
 
+    try {
+      if (props.passChildData)
+
+        props.passChildData(data.section);
+    } catch (error) {
+      console.log("error", error);
     }
 
-    if (data.name === "Contact") {
-      props.passChildData(data.section);
-      setData(data.section)
-      // navigate("/contact");
-      handleDrawerToggle();
-      setExpanded(false);
+    setData(data.section);
+    setExpanded(false);
+
+  };
 
 
+  const handleNav1 = (data) => {
+
+    navigate("/", { state: { section: data.section } });
+
+    try {
+      if (props.passChildData)
+
+        props.passChildData(data.section);
+    } catch (error) {
+      console.log("error", error);
     }
 
 
+    setData(data.section)
+    handleDrawerToggle();
+    setExpanded(false);
 
   };
 
@@ -129,27 +145,7 @@ function Appheader(props) {
 
 
   const handleHoverMI = (text, e) => {
-    //console.log({ text });
     setMySubMenu(servicesItem)
-
-    // if (text.menutitle === "Projects") {
-    //   //console.log(text);
-    //   // setMySubMenu(projectsItem);
-    //   //console.log(e.currentTarget);
-    // } else if (text.menutitle === "Products") {
-    //   // setMySubMenu(productItem);
-    // } else if (text.menutitle === "Services") {
-    //   //console.log(text);
-    //   // setMySubMenu(servicesItem);
-    // } else if (
-    //   text.menutitle === "Home" ||
-    //   text.menutitle === "About Us" ||
-    //   text.menutitle === "Portfolio" ||
-    //   text.menutitle === "Career" ||
-    //   text.menutitle === "Contact"
-    // ) {
-    //   setproject(null);
-    // }
   };
 
 
@@ -160,13 +156,7 @@ function Appheader(props) {
     }
   }, [props.addData])
 
-  
-
-
-  useEffect(()=>{
-    console.log("data",data)
-  })
-
+console.log("data",data)
 
   const drawer = (
     <Box sx={{ textAlign: "center" }}>
@@ -180,13 +170,13 @@ function Appheader(props) {
 
         item.section !== "services" ?
 
-          (<ListItem key={item.name} disablePadding>
+          (<ListItem key={item.name} >
             <ListItemButton
               sx={{
                 color: item.section === data ? "white" : "black",
                 textAlign: "center", backgroundColor: item.section === data ? "#2F4858" : ""
               }}
-              onClick={() => handleNav(item)}
+              onClick={() => handleNav1(item)}
             >
               <ListItemText primary={item.name} />
             </ListItemButton>
@@ -254,7 +244,7 @@ function Appheader(props) {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: "none" } }}
           >
-            <MenuIcon style={{ color: "red" }} />
+            <MenuIcon style={{ color: "#FF2A53" }} />
           </IconButton>
           {/* <Typography
             variant="h6"
@@ -272,10 +262,10 @@ function Appheader(props) {
               <Button
                 key={item.name}
                 sx={{
-                  color: item.section === data ? "white" : "black",
+                  color: item.section === props.first  ? "white" : "black",
                   fontSize: "1rem",
                   fontFamily: "Lato",
-                  backgroundColor: item.section === data ? "#2F4858" : "",
+                  backgroundColor: item.section === props.first ? "#2F4858" : "",
                   "&:hover": { backgroundColor: "#2F4858" },
                   marginRight: { sm: 0, lg: 10 }
                 }}
@@ -329,10 +319,8 @@ function Appheader(props) {
                     },
                     transition: '0.3s',
                     borderRadius: '5px',
-                    backgroundColor: text.subMenuName === data ? "red" : ""
-
                   }}
-                  onClick={(e) => { handleClickSubmenu(text, mySubMenu); }}
+                  onClick={(e) => { handleClickSubmenu1(text, mySubMenu); }}
                 >
                   {text.subMenuName}
                 </MenuItem>

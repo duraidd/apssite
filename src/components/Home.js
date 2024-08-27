@@ -16,6 +16,7 @@ import Timepage from "./Timepage";
 import Footer from "./Footer";
 import Flag from "./Flag";
 import { ScrollToTop } from "react-simple-scroll-up";
+import { useLocation } from "react-router-dom";
 
 
 
@@ -28,18 +29,27 @@ export default function Home() {
   const home = useRef();
   const discuss = useRef();
   const contact = useRef();
-  const [first, setfirst] = useState("");
+  const location = useLocation();
+  const section = location.state?.section || "home"
+  const [first, setfirst] = useState(section);
   const [second, setsecond] = useState("");
 
 
 
+
+
+
   useEffect(() => {
+
+
+
     if (first === "about") {
       window.scrollTo({ top: about.current.offsetTop, behavior: "smooth" });
     }
 
     if (first === "home") {
-      window.scrollTo({ top: home.current.offsetTop, behavior: "smooth" });
+      // window.scrollTo({ top: home.current.offsetTop, behavior: "smooth" });
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     }
 
     if (first === "contact") {
@@ -53,6 +63,9 @@ export default function Home() {
   }, [first])
 
 
+
+
+
   return (
     <div
       style={{
@@ -60,15 +73,15 @@ export default function Home() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        overflow: "hidden"
+        overflow: "auto"
       }}
     >
-      
-      <ScrollToTop bgColor="#ff0400" symbol="&#8593;" strokeFillColor="white" style={{zIndex: 999}}/>
-      
-      
 
-      <Appheader passChildData={setfirst} addData={second} />
+      <ScrollToTop bgColor="#ff0400" symbol="&#8593;" strokeFillColor="white" style={{ zIndex: 999 }} />
+
+
+
+      <Appheader passChildData={setfirst} addData={second} first={first} />
       <div ref={home} className="saple"
         style={{
           backgroundImage: `url(${Imah})`, marginTop: "40px", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", width: '100%'
@@ -80,7 +93,7 @@ export default function Home() {
               From Idea to Product</h1>
           </ScrollAnimation>
           <div>
-            <Button  variant="contained" sx={{ backgroundColor: "red", "&:hover": { backgroundColor: "red" } }} >Get Started</Button>
+            <Button variant="contained" sx={{ backgroundColor: "#FF2A53", "&:hover": { backgroundColor: "#FF2A53" } }} >Get Started</Button>
           </div>
         </div>
 

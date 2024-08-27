@@ -16,7 +16,7 @@ export default function Contact() {
 
 
   return (
-    <div style={{ display: 'flex', flexDirection: "column", paddingTop: "20px", paddingBottom: "20px", overflow: 'hidden' }} >
+    <div style={{ display: 'flex', flexDirection: "column", paddingTop: "20px", paddingBottom: "20px" }} >
 
 
 

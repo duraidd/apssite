@@ -7,6 +7,7 @@ import Insta from '../asset/Instagram.png'
 import LinkedIn from '../asset/LinkedIn.png'
 import styled from 'styled-components';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { useNavigate } from 'react-router-dom'
 
 
 const P = styled.p`
@@ -20,9 +21,21 @@ const P = styled.p`
 
 function Footer(props) {
 
+
+    const navigate = useNavigate();
+
+
     const handleFoot = (data) => {
-        props.passFooter(data);
-        props.fn(data)
+
+
+        navigate("/", { state: { section: data } });
+        
+        if(props.passFooter && props.fn ){
+            props.passFooter(data);
+            props.fn(data)
+        }
+        
+        
     }
 
     return (
@@ -45,8 +58,8 @@ function Footer(props) {
                 <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: "wrap", justifyContent: "space-between" }}>
                     <Box>
                         <h3 style={{ marginBottom: "20px" }} >Office</h3>
-                        <p style={{ marginBottom: "20px" ,color:'black'}} >23/C, First floor,<br />
-                            Raja Rajeshwari Nagar south Street <br />
+                        <p style={{ marginBottom: "20px", color: 'black' }} >23/C, First floor,<br />
+                            Rajarajeshwari Nagar south Street <br />
                             NGO B colony <br />Tirunelveli 627007</p>
 
                         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=apstechnologiestvl@gmail.com">apstechnologiestvl@gmail.com</a>
@@ -57,26 +70,26 @@ function Footer(props) {
                         <P onClick={() => handleFoot("home")} >Home</P>
                         <P onClick={() => handleFoot("about")} >About Us</P>
                         <P onClick={() => handleFoot("contact")} >Contact Us</P>
-                        <p style={{ marginBottom: "20px" ,color:'black'}} >Blog</p>
+                        <p style={{ marginBottom: "20px", color: 'black' }} >Blog</p>
 
                     </Box>
                     <Box>
                         <h3 style={{ marginBottom: "20px" }} >Services</h3>
-                        <p style={{ marginBottom: "20px",color:'black' }} >API Development</p>
-                        <p style={{ marginBottom: "20px",color:'black' }} >Mule Soft</p>
-                        <p style={{ marginBottom: "20px",color:'black' }} >Sales force</p>
+                        <p style={{ marginBottom: "20px", color: 'black' }} >API Development</p>
+                        <p style={{ marginBottom: "20px", color: 'black' }} >Mule Soft</p>
+                        <p style={{ marginBottom: "20px", color: 'black' }} >Sales force</p>
                     </Box>
                     <Box>
                         <h3 style={{ marginBottom: "20px" }} >Resources</h3>
-                        <p style={{ marginBottom: "20px",color:'black' }} >Portfolio</p>
-                        <p style={{ marginBottom: "20px",color:'black' }} >Our Services</p>
-                        <p style={{ marginBottom: "20px",color:'black' }} >Careers</p>
-                        <p style={{ marginBottom: "20px",color:'black' }} >Privacy Policy</p>
+                        <p style={{ marginBottom: "20px", color: 'black' }} >Portfolio</p>
+                        <p style={{ marginBottom: "20px", color: 'black' }} >Our Services</p>
+                        <p style={{ marginBottom: "20px", color: 'black' }} >Careers</p>
+                        <p style={{ marginBottom: "20px", color: 'black' }} >Privacy Policy</p>
 
                     </Box>
                 </Box>
                 <Divider />
-                <p style={{color:'black' }} >Copyright©2024 APS Technologies Pvt Ltd, All rights reserved</p>
+                <p style={{ color: 'black' }} >Copyright©2024 APS Technologies Pvt Ltd, All rights reserved</p>
             </ScrollAnimation>
         </div>
     )
