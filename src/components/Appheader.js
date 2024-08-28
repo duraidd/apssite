@@ -39,7 +39,7 @@ const servicesItem = [
   { subMenuName: "Web Application", subMenuLink: "/web-application" },
   { subMenuName: "Mobile Application", subMenuLink: "/mobile-application" },
   // { subMenuName: "Cloud Services", subMenuLink: "/cloud-services" },
-  // { subMenuName: "Digital Marketing", subMenuLink: "/digital-marketing" }
+  { subMenuName: "Digital Marketing", subMenuLink: "/digital-marketing" }
 
 
 
@@ -253,11 +253,11 @@ console.log("data",data)
           >
             APS Technologies pvt ltd
           </Typography> */}
-          <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "block" }, color: "black", paddingTop: '8px' }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "block" }, color: "black", paddingTop: '8px',marginRight:'2px' }}>
             <img src={Logoimg} alt="logo" width={'250px'} height={'50px'} />
           </Box>
 
-          <Box sx={{ display: { xs: "none", sm: "block" } }} >
+          <Box sx={{ display: { xs: "none", sm: "contents" } }} >
             {navItems.map((item) => (
               <Button
                 key={item.name}

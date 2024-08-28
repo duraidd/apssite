@@ -36,13 +36,10 @@ function Experirnce() {
                         display: 'none',
                     },
                     
-                }} >                    
+                }} >                
                       
-                    <img style={{ width: '46%', height: '450px', objectFit: 'cover', borderRadius: '100%',border:'10px dashed red' ,padding:"20px" }} src={Img1} alt="Office scene" />
-
-
                     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: 'rgba(51, 122, 183, 0.1)', padding: '6px', borderRadius: '10px' }}>
-                        <span style={{ fontSize: '40px', color: '#337ab7', fontFamily: 'Material Symbols Outlined' }}>military_tech</span>
+                        <span style={{ fontSize: '40px', color: '#337ab7', fontFamily: 'Material Symbols Outlined' }}>APS Technologies</span>
                         <p style={{ fontSize: '24px', color: '#337ab7', fontWeight: 'bold' }}>10+</p>
                         <p style={{ fontSize: '16px', color: '#337ab7' }}>Years Of Experience</p>
                     </div>

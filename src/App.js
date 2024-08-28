@@ -6,6 +6,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Webapp from "./components/Webapp";
 import Mobileapp from "./components/Mobileapp";
+import Digitalmarketing from "./components/Digitalmarketing";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/web-application" element={<Webapp/>} />
         
         <Route path="/mobile-application" element={<Mobileapp/>} />
+        <Route path="/digital-marketing" element={<Digitalmarketing/>}/>
 
         <Route path="/contact" element={<Contact />} />
       </Routes>
