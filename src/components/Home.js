@@ -73,8 +73,7 @@ export default function Home() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        overflow: "auto",
-        backgroundColor:'grey'
+        overflow: "auto"       
       }}
     >
 
