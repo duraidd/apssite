@@ -145,6 +145,9 @@ function Webapp() {
       }));
     
       const cardStyle = (theme) => ({
+
+        '&:hover':{boxShadow: "5px 5px 10px red"},
+
         [theme.breakpoints.only("sm")]: {
           height: 480,
           marginTop: 3,
@@ -169,6 +172,8 @@ function Webapp() {
       });
     
       const cardStyle1 = (theme) => ({
+        '&:hover':{boxShadow: "5px 5px 10px red"},
+
         [theme.breakpoints.down("md")]: {
           height: 500,
           marginTop: 3,

@@ -51,8 +51,10 @@ export default function Mobileapp() {
         width: "30%",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-between",
+        justifyContent: "space-between", 
+        '&:hover':{boxShadow: "5px 5px 10px red"},       
         marginBottom: 5,
+        
 
         [theme.breakpoints.down("md")]: {
             width: "100%",
@@ -258,7 +260,7 @@ export default function Mobileapp() {
             {/* Full vertical page */}
             <MobAppDevStepsSection>
                 {appProcess.map((obj) => (
-                    <Card elevation={3} sx={MobAppDevStepsCards}>
+                    <Card elevation={5} sx={MobAppDevStepsCards}>
                         <CardContent>
                             <Typography variant="h6" >
                                 {obj.title}
