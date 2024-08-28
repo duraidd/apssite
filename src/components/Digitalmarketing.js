@@ -87,23 +87,20 @@ function Digitalmarketing() {
                         </Box>
                         <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start' }} >
                         <ScrollAnimation animateIn='swing'> <img src={Pyramid} /></ScrollAnimation>
-                            <Typography color={'black'} variant='h5' sx={{ marginTop: '30px' }} >Content Strategy</Typography>
-                            <Typography color={'#78847D'} variant='h6' sx={{ marginTop: '10px' }} >All our content marketing <br /> service packages include <br />
-                                a custom content strategy</Typography>
+                            <Typography color={'black'} variant='h5' sx={{ marginTop: '30px' }} >Content Development</Typography>
+                            <Typography color={'#78847D'} variant='h6' sx={{ marginTop: '10px' }} >We create some content <br/> calendar for your company’s <br/> must-share content</Typography>
                         </Box>
                     </Box>
                     <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', gap: '100px', '@media (max-width: 425px)': { flexWrap: 'wrap', justifyContent: 'center' } }} >
                         <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start' }} >
                         <ScrollAnimation animateIn='swing'> <img src={Glass} /></ScrollAnimation>
-                            <Typography color={'black'} variant='h5' sx={{ marginTop: '30px' }} >Content Strategy</Typography>
-                            <Typography color={'#78847D'} variant='h6' sx={{ marginTop: '10px' }} >All our content marketing <br /> service packages include <br />
-                                a custom content strategy</Typography>
+                            <Typography color={'black'} variant='h5' sx={{ marginTop: '30px' }} >Content Creation</Typography>
+                            <Typography color={'#78847D'} variant='h6' sx={{ marginTop: '10px' }} >Experienced in <br/> copywriting and marketing <br/> team begins creating <br/> content</Typography>
                         </Box>
                         <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start' }} >
                         <ScrollAnimation animateIn='swing'> <img src={Circle} /></ScrollAnimation>
-                            <Typography color={'black'} variant='h5' sx={{ marginTop: '30px' }} >Content Strategy</Typography>
-                            <Typography color={'#78847D'} variant='h6' sx={{ marginTop: '10px' }} >All our content marketing <br /> service packages include <br />
-                                a custom content strategy</Typography>
+                            <Typography color={'black'} variant='h5' sx={{ marginTop: '30px' }} >Content Optimization</Typography>
+                            <Typography color={'#78847D'} variant='h6' sx={{ marginTop: '10px' }} >Your content marketing <br/> management services also <br/> include SEO</Typography>
                         </Box>
                     </Box>
                 </Box>
