@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Appheader from "./Appheader";
 import Imah from "../asset/Banner.jpg";
 import "./../App.css"
-import { Button, Icon, IconButton } from "@mui/material";
+import { Button, Icon, IconButton, Typography } from "@mui/material";
 import About from "./About";
 import Contact from "./Contact";
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -73,7 +73,8 @@ export default function Home() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        overflow: "auto"
+        overflow: "auto",
+        backgroundColor:'grey'
       }}
     >
 
@@ -89,8 +90,8 @@ export default function Home() {
       >
         <div style={{ textAlign: "center", display: "flex", flexDirection: "column", paddingLeft: "20px", paddingRight: "20px" }}>
           <ScrollAnimation animateIn="swing" animateOnce >
-            <h1>Software Development <br />
-              From Idea to Product</h1>
+            <Typography variant='h2' color={'black'} >Software Development <br />
+              From Idea to Product</Typography>
           </ScrollAnimation>
           <div>
             <Button variant="contained" sx={{ backgroundColor: "#FF2A53", "&:hover": { backgroundColor: "#FF2A53" } }} >Get Started</Button>
