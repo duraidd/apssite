@@ -147,17 +147,17 @@ function Digitalmarketing() {
                     <Card elevation={1} sx={{ padding: '30px','&:hover':{boxShadow: "5px 5px 10px red"} }} >
                         <img src={Shop} />
                         <Typography color='black' variant='h6' >Market Forcest</Typography>
-                        <Typography color='black' variant='h6' >Leverage agile framework <br/> to provide a robust high <br/> level synopsys overviews</Typography>
+                        <Typography color='#78847D' variant='h6' >Leverage agile framework <br/> to provide a robust high <br/> level synopsys overviews</Typography>
                     </Card>
                     <Card elevation={1} sx={{ padding: '30px','&:hover':{boxShadow: "5px 5px 10px red"} }} >
                         <img src={Facard} />
                         <Typography color='black' variant='h6' >Fund Raising</Typography>
-                        <Typography color='black' variant='h6' >Bring to the table survival <br/> strategies to ensure <br/> proactive domination</Typography>
+                        <Typography color='#78847D' variant='h6' >Bring to the table survival <br/> strategies to ensure <br/> proactive domination</Typography>
                     </Card>
                     <Card elevation={1} sx={{ padding: '30px','&:hover':{boxShadow: "5px 5px 10px red"} }} >
                         <img src={Fachart} />
                         <Typography color='black' variant='h6'>Cash Flow</Typography>
-                        <Typography color='black' variant='h6' >Grow the holistic world <br/> view of disruptive <br/> innovation workspace</Typography>
+                        <Typography color='#78847D' variant='h6' >Grow the holistic world <br/> view of disruptive <br/> innovation workspace</Typography>
                     </Card>
                 </Box>
             </Box>
