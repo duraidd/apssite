@@ -12,7 +12,7 @@ function Discuss(props) {
     }
 
     return (
-        <div style={{ display: 'flex', flexDirection: "row", padding: "5% 9%",width:"100vw" }} >
+        <div style={{ display: 'flex', flexDirection: "row", padding: "5% 9%",width:"100%",backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)` }} >
             <Box sx={{
                 '@media (max-width: 468px)': {
                     display: 'none',

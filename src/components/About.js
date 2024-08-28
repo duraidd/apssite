@@ -5,7 +5,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 export default function About() {
   return (
-    <div style={{overflow:'hidden', display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: 'space-evenly', width: "100vw", padding: "5% 10% 5% 10%", background: `linear-gradient(162deg, rgba(255,255,255,1) 0%, rgba(253,248,253,1) 5%, rgba(237,179,235,0.8743872549019608) 45%, rgba(230,164,228,0.6362920168067228) 100%)` }}>
+    <div style={{overflow:'hidden', display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: 'space-evenly', width: "100vw", padding: "5% 10% 5% 10%", backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)` }}>
       
       <div style={{ border: "10px solid #FF2A53", position: "relative", borderRadius: "5%" }} className="animate_animated animate__backInLeft" >      
         <img
@@ -20,7 +20,7 @@ export default function About() {
         />        
       </div>
      
-      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', flexWrap: 'wrap', marginTop: '20px' }} >
+      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', flexWrap: 'wrap', marginTop: '30px' }} >
       <ScrollAnimation animateIn="bounceInRight" duration="2" animateOnce > 
         <h1>Technologically diverse solutions <br /> with MuleSoft</h1>
         <p style={{fontFamily:'sans-serif'}} >Phi Dimensions is your one stop shop for technologically diverse solutions <br /> driven by top-notch platforms like MuleSoft , Salesforce, API (Application <br /> Programming Interface).</p>

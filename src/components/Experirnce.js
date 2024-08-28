@@ -6,13 +6,14 @@ function Experirnce() {
     return (
 
         <div style={{
-            backgroundColor: '#f7f7f7',
+            // backgroundColor: '#f7f7f7',
             // boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
-            borderRadius: '10px',
+            // borderRadius: '10px',
             padding: '10px',
             width: '100%',
             margin: '0 auto',
-            padding: '5%  8%  5%  8%'
+            padding: '5%  8%  5%  8%',
+            backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)`
 
         }}>
             <Box sx={{
