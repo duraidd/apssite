@@ -66,9 +66,7 @@ function Webapp() {
 
       const DivStyle1 = styled("div")(({ theme }) => ({
         display: "flex",
-        paddingLeft: "5%",
-        paddingRight: "5%",
-        marginTop:'50px',
+        padding:'5% 10%',                
         [theme.breakpoints.down("md")]: {
           flexDirection: "column",
           justifyContent: "center",

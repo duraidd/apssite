@@ -19,7 +19,7 @@ function Custcard() {
         <div style={{ display: 'flex', flexDirection: "column", padding:"10%", overflow: 'hidden' }} >
 
             <div style={{ textAlign: "center", paddingLeft: "20px", paddingRight: "20px" }}>
-                <ScrollAnimation animateIn="slideInRight" duration="1.5">
+                <ScrollAnimation animateIn="slideInRight" duration="1.5" animateOnce>
                     <h1
                         style={{
                             fontFamily: "font-title",
@@ -30,7 +30,7 @@ function Custcard() {
                         Customized IT Services to Elevate your Business
                     </h1>
                 </ScrollAnimation>
-                <ScrollAnimation animateIn="slideInLeft" duration="1.5">
+                <ScrollAnimation animateIn="slideInLeft" duration="1.5" animateOnce>
                     <p style={{ marginTop: "1rem", color: "#666" }}>
                         Phi Dimensions is your one stop shop for technologically diverse
                         solutions driven by top-notch platforms like MuleSoft, Salesforce,

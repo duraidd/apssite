@@ -88,7 +88,7 @@ export default function Home() {
         }}
       >
         <div style={{ textAlign: "center", display: "flex", flexDirection: "column", paddingLeft: "20px", paddingRight: "20px" }}>
-          <ScrollAnimation animateIn="swing" >
+          <ScrollAnimation animateIn="swing" animateOnce >
             <h1>Software Development <br />
               From Idea to Product</h1>
           </ScrollAnimation>

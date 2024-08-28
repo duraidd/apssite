@@ -9,7 +9,7 @@ function Flag() {
     
 <Box sx={{display:'flex',flexDirection:'row',justifyContent:'space-around',alignItems:'center',width:'100%',flexWrap:'wrap',padding:'20px 10px 30px 10px',gap:'20px'}} >
 
-<ScrollAnimation animateIn='jello' >
+<ScrollAnimation animateIn='jello' animateOnce >
 <article class="card33">
   <img
     class="card33__background"
@@ -29,7 +29,7 @@ function Flag() {
   </div>
 </article>
 </ScrollAnimation>
-<ScrollAnimation animateIn='jello' >
+<ScrollAnimation animateIn='jello' animateOnce >
 <article class="card33">
   <img
     class="card33__background"
@@ -49,7 +49,7 @@ function Flag() {
   </div>
 </article>
 </ScrollAnimation>
-<ScrollAnimation animateIn='jello' >
+<ScrollAnimation animateIn='jello' animateOnce >
 <article class="card33">
   <img
     class="card33__background"
@@ -69,7 +69,7 @@ function Flag() {
   </div>
 </article>
 </ScrollAnimation>
-<ScrollAnimation animateIn='jello' >
+<ScrollAnimation animateIn='jello' animateOnce >
 <article class="card33">
   <img
     class="card33__background"

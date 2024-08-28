@@ -15,6 +15,8 @@ import Checklist from '../asset/Checklist.png'
 import Shop from '../asset/shop.png'
 import Facard from '../asset/cards.png'
 import Fachart from '../asset/fachart.png'
+import { ScrollToTop } from "react-simple-scroll-up";
+
 
 
 
@@ -22,15 +24,17 @@ import Fachart from '../asset/fachart.png'
 
 function Digitalmarketing() {
 
-    // useEffect(() => {
-    //     window.scrollTo(0, 0);
-    // }, [])
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
 
 
     return (
         <>
             <Appheader />
+      <ScrollToTop bgColor="#ff0400" symbol="&#8593;" strokeFillColor="white" style={{ zIndex: 999 }} />
+
             <div className="saple" style={{
                 backgroundImage: `url(${Imah})`, marginTop: "40px", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", width: '100%'
             }} >

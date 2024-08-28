@@ -264,7 +264,8 @@ console.log("data",data)
                 sx={{
                   color: item.section === props.first  ? "white" : "black",
                   fontSize: "1rem",
-                  fontFamily: "Lato",
+                  typography: { fontFamily: '"Lato, sans-serif"' },
+                  fontWeight:700,
                   backgroundColor: item.section === props.first ? "#2F4858" : "",
                   "&:hover": { backgroundColor: "#2F4858" },
                   marginRight: { sm: 0, lg: 10 }
