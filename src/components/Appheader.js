@@ -38,7 +38,7 @@ const servicesItem = [
   // { subMenuName: "UI Work", subMenuLink: "/ui-work" },
   { subMenuName: "Web Application", subMenuLink: "/web-application" },
   { subMenuName: "Mobile Application", subMenuLink: "/mobile-application" },
-  // { subMenuName: "Cloud Services", subMenuLink: "/cloud-services" },
+  { subMenuName: "Cloud Services", subMenuLink: "/cloud-services" },
   { subMenuName: "Digital Marketing", subMenuLink: "/digital-marketing" }
 
 

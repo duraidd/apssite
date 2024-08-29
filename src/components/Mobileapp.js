@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 
 
+import ScrollAnimation from 'react-animate-on-scroll';
 
 
 import "animate.css/animate.min.css";
@@ -54,6 +55,7 @@ export default function Mobileapp() {
         justifyContent: "space-between", 
         '&:hover':{boxShadow: "5px 5px 10px red"},       
         marginBottom: 5,
+        backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)`,
         
 
         [theme.breakpoints.down("md")]: {
@@ -183,8 +185,8 @@ export default function Mobileapp() {
             <Appheader />
             
 
-            <div style={{ width: "100%", marginTop: "80px" }}>
-            <div style={{display:'flex',flexDirection:'row',justifyContent:'center',paddingLeft:'10px'}}>
+            <div style={{ width: "100%" }}>
+            <div style={{display:'flex',flexDirection:'row',justifyContent:'center',paddingLeft:'10px', marginTop: "80px"}}>
                 <Typography variant='h4' style={{ textDecoration: 'underline',textDecorationColor:'#FF2A53' }} >Mobile Application Development</Typography>
             </div>
                 {/* 67% middle of page */}
@@ -216,13 +218,15 @@ export default function Mobileapp() {
                     {/* Ride Side */}
                     <DivStyle3>
                         {/* React Player Div */}
-                        <div className="container">
+                        <div style={{padding:'0px 10px'}} >
+                        <ScrollAnimation animateIn="zoomIn">
                             <img
                                 width="100%"
                                 style={{ top: 0, left: 0, height: "300px" }}
                                 src={mobFirstScreen}
                                 alt="mobFirstScreen"
                             ></img>
+                            </ScrollAnimation>
                         </div>
                         {/* React Player Div */}
                     </DivStyle3>

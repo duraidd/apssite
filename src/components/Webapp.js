@@ -1,5 +1,6 @@
 import Appheader from './Appheader'
 import Footer from './Footer'
+import ScrollAnimation from 'react-animate-on-scroll';
 
 
 
@@ -193,8 +194,9 @@ function Webapp() {
         width: "30%",
         display: "flex",
         flexDirection: "column",
-    
-        marginBottom: 60,
+        backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)`,
+        padding:'2%', 
+        borderRadius:'3%',
     
         [theme.breakpoints.down("md")]: {
           width: "100%",
@@ -377,16 +379,16 @@ function Webapp() {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        overflow: "hidden"
+        overflow: "hidden"        
       }} >
         <Appheader/>
        
 
-        <div style={{ width: "100%", marginTop: "2%" }}>
+        <div style={{ width: "100%", marginTop: "2%" ,backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)` }}>
         {/* 67% middle of page */}
 
         <div style={{display:'flex',flexDirection:'row',justifyContent:'center',paddingLeft:'10px',marginTop:'80px'}}>
-                <Typography variant='h4' style={{ textDecoration: 'underline',textDecorationColor:'#FF2A53' }} >Web Application Development</Typography>
+                <Typography variant='h4' style={{ textDecoration: 'underline',textDecorationColor:'white' }} >Web Application Development</Typography>
             </div>
 
         <DivStyle1>
@@ -446,24 +448,29 @@ function Webapp() {
           {/* Ride Side */}
           <DivStyle3>
             {/* React Player Div */}
-            <div className="container">
+            
+            <div style={{padding:'0px 10px'}} >
+            <ScrollAnimation animateIn="zoomIn">
               <img
                 width="100%"
                 style={{ top: 0, left: 0, height: "300px" }}
                 src={webAppDevImg}
                 alt="webAppDevImg"
               ></img>
+              </ScrollAnimation>
             </div>
             {/* React Player Div */}
           </DivStyle3>
         </DivStyle1>
       </div>
 
-      <div style={{ width: "100%", marginTop: "2%" }}>
+      <div style={{ width: "100%"  }}>
         {/* 67% middle of page */}
         <DivStyle1>
           {/* Left Side */}
           <DivStyle2>
+          <ScrollAnimation animateIn="flipInY">
+
             <Card
               sx={cardStyle}
               style={{
@@ -471,6 +478,7 @@ function Webapp() {
                 paddingRight: 30,
                 borderTopRightRadius: 30,
                 borderBottomLeftRadius: 30,
+                backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)`
               }}
               elevation={3}
             >
@@ -511,9 +519,11 @@ function Webapp() {
                 ))}
               </CardContent>
             </Card>
+            </ScrollAnimation>
           </DivStyle2>
           {/* Ride Side */}
           <DivStyle3>
+            <ScrollAnimation animateIn="flipInY">
             <Card
               sx={cardStyle1}
               style={{
@@ -521,6 +531,7 @@ function Webapp() {
                 paddingRight: 30,
                 borderTopRightRadius: 30,
                 borderBottomLeftRadius: 30,
+                backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)`
               }}
               elevation={3}
             >
@@ -561,11 +572,12 @@ function Webapp() {
                 ))}
               </CardContent>
             </Card>
+            </ScrollAnimation>
           </DivStyle3>
         </DivStyle1>
       </div>
 
-      <div style={{ width: "100%", marginTop: "5%" }}>
+      <div style={{ width: "100%" , backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)` }}>
         {/* 67% middle of page */}
         <DivStyle1 style={{ flexDirection: "column" }}>
           <Typography
@@ -591,7 +603,9 @@ function Webapp() {
           >
             {services.map((obj) => (
               <DevelopmentServiceCards>
+                <ScrollAnimation animateIn="zoomIn">
                 <img src={obj.imageUrl} alt="objImageUrl" width="50%" />
+                </ScrollAnimation>
                 <Typography variant="h6" >{obj.text}</Typography>
               </DevelopmentServiceCards>
             ))}
@@ -599,7 +613,7 @@ function Webapp() {
         </DivStyle1>
       </div>
 
-      <div style={{ width: "100%", marginTop: "5%" }}>
+      <div style={{ width: "100%"}}>
         {/* 67% middle of page */}
         <DivStyle1 style={{ flexDirection: "column" }}>
           <Typography
@@ -618,7 +632,7 @@ function Webapp() {
               display: "flex",
               justifyContent: "space-between",
               flexDirection: "row",
-              marginTop: "7%",
+              marginTop: "2%",
               flexWrap: "wrap",
               gap: 10,
             }}
@@ -960,7 +974,7 @@ function Webapp() {
       </div>
 
     
-        <Footer/>
+        <Footer />
     </div>
   )
 }
