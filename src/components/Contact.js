@@ -54,6 +54,8 @@ export default function Contact() {
         }}
       >
 
+<ScrollAnimation animateIn="zoomIn" duration="1.5">
+
         <Box
           sx={{
             textAlign: "center",
@@ -87,9 +89,9 @@ export default function Contact() {
             >
               API Development
             </h2>
-          <ScrollAnimation animateIn="slideInLeft" duration="1.5" animateOnce>
+          
             <p style={{ marginTop: "1rem", color: "#666" }}>We provide comprehensive API development <br /> services to help businesses build scalable and <br /> secure APIs. Our expert team offers end-to <br /> -end solutions for API development, from design <br /> and development to testing and deployment.</p>
-          </ScrollAnimation>
+          
           <div
             style={{
               marginTop: "1rem",
@@ -110,8 +112,9 @@ export default function Contact() {
             </IconButton>
           </div>
         </Box>
+        </ScrollAnimation>
 
-
+        <ScrollAnimation animateIn="zoomIn" duration="1.5">
         <Box
           sx={{
             textAlign: "center",
@@ -145,9 +148,9 @@ export default function Contact() {
             >
               API Development
             </h2>
-          <ScrollAnimation animateIn="slideInLeft" duration="1.5" animateOnce>
+          
             <p style={{ marginTop: "1rem", color: "#666" }}>We provide comprehensive API development <br /> services to help businesses build scalable and <br /> secure APIs. Our expert team offers end-to <br /> -end solutions for API development, from design <br /> and development to testing and deployment.</p>
-          </ScrollAnimation>
+          
           <div
             style={{
               marginTop: "1rem",
@@ -170,8 +173,9 @@ export default function Contact() {
           </div>
 
         </Box>
+</ScrollAnimation>
 
-
+<ScrollAnimation animateIn="zoomIn" duration="1.5">
         <Box
           sx={{
             textAlign: "center",
@@ -205,9 +209,9 @@ export default function Contact() {
             >
               API Development
             </h2>
-          <ScrollAnimation animateIn="slideInLeft" duration="1.5" animateOnce >
+          
             <p style={{ marginTop: "1rem", color: "#666" }}>We provide comprehensive API development <br /> services to help businesses build scalable and <br /> secure APIs. Our expert team offers end-to <br /> -end solutions for API development, from design <br /> and development to testing and deployment.</p>
-          </ScrollAnimation>
+          
           <div
             style={{
               marginTop: "1rem",
@@ -229,7 +233,7 @@ export default function Contact() {
             </IconButton>
           </div>
         </Box>
-
+        </ScrollAnimation>
       </div>
 
     </div>

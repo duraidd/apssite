@@ -17,7 +17,7 @@ function Empower() {
                     flexDirection: 'column'
                 }
             }}>
-                <ScrollAnimation animateIn="slideInRight" duration="1.5">
+                <ScrollAnimation animateIn="zoomIn" duration="1.5">
                     <h1
                         style={{
                             fontFamily: "font-title",
@@ -29,13 +29,15 @@ function Empower() {
                     </h1>
                 </ScrollAnimation>
                 <Divider orientation="vertical" flexItem variant="middle" />
-                <ScrollAnimation animateIn="slideInLeft" duration="1.5">
+                <ScrollAnimation animateIn="zoomIn" duration="1.5">
                     <p style={{ marginTop: "1rem", color: "#666" }}>
                         Our expertise lies in developing and implementing cutting-edge solutions <br />
                         that streamline your business processes, enhance productivity, and drive <br /> growth. We work with a wide range of clients across industries.
                     </p>
                 </ScrollAnimation>
             </Box>
+
+            <ScrollAnimation animateIn="zoomIn">
 
             <Box
                 sx={{
@@ -71,7 +73,7 @@ function Empower() {
                             marginBottom: "1rem"
                         }}
                     >
-                        <ScrollAnimation animateIn="zoomIn" >
+                        
 
                         <div style={{ padding: '10px', borderRadius: "50%", boxShadow: "1px 12px 20px #f8a6b6" }}>
                             <img
@@ -82,18 +84,18 @@ function Empower() {
                                 alt="API Logo"
                             />
                         </div>
-                        </ScrollAnimation>
+                        
                     </div>
-                    <ScrollAnimation animateIn="rotateInDownRight" >
+                    
                         <h2
                             style={{ fontSize: "1.25rem", fontWeight: 600, color: "#333" }}
                         >
                             Empowering Your Digital <br /> Transformation
                         </h2>
-                    </ScrollAnimation>
-                    <ScrollAnimation animateIn="rotateInUpRight" duration="1.5">
+                    
+                    
                         <p style={{ marginTop: "1rem", color: "#666" }}>Unleash your business's full <br /> potential with our IT expertise and <br /> drive a successful digital <br /> transformation that.</p>
-                    </ScrollAnimation>
+                    
                 </Box>
 
 
@@ -115,7 +117,7 @@ function Empower() {
                             marginBottom: "1rem"
                         }}
                     >
-                        <ScrollAnimation animateIn="zoomIn" >
+                        
 
                         <div style={{ padding: '10px', borderRadius: "50%", boxShadow: "1px 12px 20px #f8a6b6" }}>
                             <img
@@ -126,18 +128,18 @@ function Empower() {
                                 alt="API Logo"
                             />
                         </div>
-                        </ScrollAnimation>
+                        
                     </div>
-                    <ScrollAnimation animateIn="rotateInDownRight" >
+                    
                         <h2
                             style={{ fontSize: "1.25rem", fontWeight: 600, color: "#333" }}
                         >
                             Seamless Solutions for <br /> Complex Challenges
                         </h2>
-                    </ScrollAnimation>
-                    <ScrollAnimation animateIn="rotateInUpRight" duration="1.5">
+                    
+                    
                         <p style={{ marginTop: "1rem", color: "#666" }}>From intricate software <br /> development to intricate problem- <br /> solving, our skilled team excels at <br /> providing seamless solutions.</p>
-                    </ScrollAnimation>
+                    
 
 
                 </Box>
@@ -161,7 +163,7 @@ function Empower() {
                             marginBottom: "1rem"
                         }}
                     >
-                        <ScrollAnimation animateIn="zoomIn" >
+                        
                             <div style={{ padding: '10px', borderRadius: "50%", boxShadow: "1px 12px 20px #f8a6b6" }}>
                                 <img
                                     src={Img3}
@@ -171,20 +173,20 @@ function Empower() {
                                     alt="API Logo"
                                 />
                             </div>
-                        </ScrollAnimation>
+                        
 
 
                     </div>
-                    <ScrollAnimation animateIn="rotateInDownRight" >
+                    
                         <h2
                             style={{ fontSize: "1.25rem", fontWeight: 600, color: "#333" }}
                         >
                             Delivering Excellence <br /> Through Collaboration
                         </h2>
-                    </ScrollAnimation>
-                    <ScrollAnimation animateIn="rotateInUpRight" duration="1.5" >
+                    
+                    
                         <p style={{ marginTop: "1rem", color: "#666" }}>We believe in the power of <br /> collaboration. By working closely <br /> with you, we ensure that our IT <br /> services align perfectly.</p>
-                    </ScrollAnimation>
+                    
 
                 </Box>
 
@@ -206,7 +208,7 @@ function Empower() {
                             marginBottom: "1rem"
                         }}
                     >
-                        <ScrollAnimation animateIn="zoomIn" >
+                        
 
                         <div style={{ padding: '10px', borderRadius: "50%", boxShadow: "1px 12px 20px #f8a6b6" }}>
                             <img
@@ -217,23 +219,23 @@ function Empower() {
                                 alt="API Logo"
                             />
                         </div>
-                        </ScrollAnimation>
+                        
                     </div>
-                    <ScrollAnimation animateIn="rotateInDownRight" >
+                    
                         <h2
                             style={{ fontSize: "1.25rem", fontWeight: 600, color: "#333" }}
                         >
                             Innovation at the Core
                         </h2>
-                    </ScrollAnimation>
-                    <ScrollAnimation animateIn="rotateInUpRight" duration="1.5" >
+                    
+                    
                         <p style={{ marginTop: "1rem", color: "#666" }}>Embrace the future of technology <br /> with our innovative IT services. <br /> We stay ahead of the curve, <br /> leveraging the advancements.</p>
-                    </ScrollAnimation>
+                    
 
                 </Box>
 
             </Box>
-            
+            </ScrollAnimation>
 
         </div>
 
