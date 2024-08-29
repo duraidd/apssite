@@ -104,7 +104,7 @@ export default function Home() {
       <Custcard />
       <Experirnce />
       <Empower />
-      <div ref={discuss} ><Discuss passData={setfirst} /></div>
+      <div ref={discuss} style={{width:'100%'}} ><Discuss passData={setfirst} /></div>
       <Flag />
       <div style={{ width: '100%' }} ref={contact} >
         <Timepage />
