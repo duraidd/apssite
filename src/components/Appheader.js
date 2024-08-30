@@ -29,7 +29,9 @@ const navItems = [
   { name: "Home", path: "/", section: 'home' },
   { name: "Services", path: "", section: 'services' },
   { name: "About", path: "/about", section: 'about' },
-  { name: "Contact", path: "/contact", section: 'contact' },
+  { name: "Career", path: "/career", section: 'career' },
+  { name: "Contact", path: "/contact", section: 'contact' }
+
 ];
 
 
@@ -85,9 +87,26 @@ function Appheader(props) {
 
   const handleNav = (data) => {
 
-    if(data.path)
 
-    navigate("/", { state: { section: data.section } });
+    if(data.section === 'career'){
+
+
+      navigate("/career", { state: { section: data.section } });
+
+      try {
+        if (props.passChildData)
+  
+          props.passChildData(data.section);
+      } catch (error) {
+        console.log("error", error);
+      }
+  
+      setData(data.section);
+      setExpanded(false);
+    } else if (data.path){
+      
+
+      navigate("/", { state: { section: data.section } });
 
 
     try {
@@ -100,6 +119,7 @@ function Appheader(props) {
 
     setData(data.section);
     setExpanded(false);
+  }
 
   };
 
@@ -156,7 +176,7 @@ function Appheader(props) {
     }
   }, [props.addData])
 
-console.log("data",data)
+console.log("data",data);
 
   const drawer = (
     <Box sx={{ textAlign: "center" }}>
@@ -253,7 +273,7 @@ console.log("data",data)
           >
             APS Technologies pvt ltd
           </Typography> */}
-          <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "block" }, color: "black", paddingTop: '8px',marginRight:'2px' }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "block" }, color: "black", paddingTop: '8px', marginRight: '2px' }}>
             <img src={Logoimg} alt="logo" width={'250px'} height={'50px'} />
           </Box>
 
@@ -262,10 +282,10 @@ console.log("data",data)
               <Button
                 key={item.name}
                 sx={{
-                  color: item.section === props.first  ? "white" : "black",
+                  color: item.section === props.first ? "white" : "black",
                   fontSize: "1rem",
                   typography: { fontFamily: '"Lato, sans-serif"' },
-                  fontWeight:700,
+                  fontWeight: 700,
                   backgroundColor: item.section === props.first ? "#2F4858" : "",
                   "&:hover": { backgroundColor: "#2F4858" },
                   marginRight: { sm: 0, lg: 10 }

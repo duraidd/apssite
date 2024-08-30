@@ -35,7 +35,7 @@ export default function Home() {
   const [second, setsecond] = useState("");
 
 
-
+console.log("first",first)
 
 
 

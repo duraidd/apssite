@@ -8,6 +8,8 @@ import Webapp from "./components/Webapp";
 import Mobileapp from "./components/Mobileapp";
 import Digitalmarketing from "./components/Digitalmarketing";
 import Cloudservices from "./components/Cloudservices";
+import CareerDetails from "./components/CareerDetails";
+import Career from "./components/Carrer";
 
 function App() {
   return (
@@ -18,7 +20,8 @@ function App() {
         <Route path="/mobile-application" element={<Mobileapp/>} />
         <Route path="/digital-marketing" element={<Digitalmarketing/>}/>
         <Route path="/cloud-services" element={<Cloudservices/>}/>
-
+        <Route path="/careerdetails" element={<CareerDetails/>}/>
+        <Route path="/career" element={<Career/>}/>
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
