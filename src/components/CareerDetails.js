@@ -99,7 +99,7 @@ export default function CareerDetails() {
     if (response) {
       setLoader(false);
       setTimeout(() => {
-        navigate('/career');
+        navigate('/career', { state: { section: data.section } });
       }, 2000)
     }
 
