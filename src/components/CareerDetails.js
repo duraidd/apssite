@@ -11,7 +11,7 @@ import { ScrollToTop } from "react-simple-scroll-up";
 // import HomeIcon from "@mui/icons-material/Home";
 // import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import SendIcon from "@mui/icons-material/Send";
 import SideTip from "./SideTip";
 
@@ -36,6 +36,8 @@ const BreadcrumbStyle = styled("div")(({ theme }) => ({
 
 export default function CareerDetails() {
   const location = useLocation();
+
+ const navigate = useNavigate();
 
   const [details, setDetails] = useState({});
 
@@ -95,7 +97,8 @@ export default function CareerDetails() {
     }, 1000)
 
     if (response) {
-    setLoader(false)
+    setLoader(false);
+    navigate('/career');
     }
 
 
