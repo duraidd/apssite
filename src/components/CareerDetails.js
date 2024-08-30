@@ -37,7 +37,7 @@ const BreadcrumbStyle = styled("div")(({ theme }) => ({
 export default function CareerDetails() {
   const location = useLocation();
 
- const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const [details, setDetails] = useState({});
 
@@ -93,12 +93,14 @@ export default function CareerDetails() {
     toast.success(response.data.message, { autoClose: 3000 })
 
     setTimeout(() => {
-        setfirst({ name: "", email: "", subject: "", message: "" })
+      setfirst({ name: "", email: "", subject: "", message: "" })
     }, 1000)
 
     if (response) {
-    setLoader(false);
-    navigate('/career');
+      setLoader(false);
+      setTimeout(() => {
+        navigate('/career');
+      }, 2000)
     }
 
 
