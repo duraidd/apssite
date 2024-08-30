@@ -88,58 +88,81 @@ function Appheader(props) {
   const handleNav = (data) => {
 
 
-    if(data.section === 'career'){
+    if (data.section === 'career') {
 
 
       navigate("/career", { state: { section: data.section } });
 
       try {
         if (props.passChildData)
-  
+
           props.passChildData(data.section);
       } catch (error) {
         console.log("error", error);
       }
-  
+
       setData(data.section);
       setExpanded(false);
-    } else if (data.path){
-      
+    } else if (data.path) {
+
 
       navigate("/", { state: { section: data.section } });
 
 
-    try {
-      if (props.passChildData)
+      try {
+        if (props.passChildData)
 
-        props.passChildData(data.section);
-    } catch (error) {
-      console.log("error", error);
+          props.passChildData(data.section);
+      } catch (error) {
+        console.log("error", error);
+      }
+
+      setData(data.section);
+      setExpanded(false);
     }
-
-    setData(data.section);
-    setExpanded(false);
-  }
 
   };
 
 
   const handleNav1 = (data) => {
 
-    navigate("/", { state: { section: data.section } });
 
-    try {
-      if (props.passChildData)
+    console.log(data, "EEEE")
 
-        props.passChildData(data.section);
-    } catch (error) {
-      console.log("error", error);
+    if (data.section === 'career') {
+      setData(data.section);
+
+      navigate("/career", { state: { section: data.section } });
+
+      try {
+        if (props.passChildData)
+
+          props.passChildData(data.section);
+      } catch (error) {
+        console.log("error", error);
+      }
+
+      handleDrawerToggle();
+      setExpanded(false);
+
+    } else if (data.path) {
+
+      navigate("/", { state: { section: data.section } });
+
+      try {
+        if (props.passChildData)
+
+          props.passChildData(data.section);
+      } catch (error) {
+        console.log("error", error);
+      }
+
+
+      setData(data.section)
+      handleDrawerToggle();
+      setExpanded(false);
+
     }
-
-
-    setData(data.section)
-    handleDrawerToggle();
-    setExpanded(false);
 
   };
 
@@ -176,7 +199,7 @@ function Appheader(props) {
     }
   }, [props.addData])
 
-console.log("data",data);
+  console.log("data", data);
 
   const drawer = (
     <Box sx={{ textAlign: "center" }}>
