@@ -14,7 +14,6 @@ function Timepage() {
     const handleSend = async (e) => {
         e.preventDefault();
 
-        console.log("FFFF", first);
 
         setLoader(true)
 

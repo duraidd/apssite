@@ -25,6 +25,7 @@ import Footer from "./Footer";
 import Appheader from "./Appheader";
 import { ToastContainer, toast } from 'react-toastify';
 import Img1 from '../asset/Girl2.png'
+import axios from "axios";
 
 
 
@@ -38,7 +39,7 @@ export default function CareerDetails() {
 
   const [details, setDetails] = useState({});
 
-  const [first, setfirst] = useState({ name: "", email: "", subject: "", message: "" });
+  const [first, setfirst] = useState({ name: "", email: "", number: "", resume: "" });
 
   const [loader, setLoader] = useState(false);
 
@@ -71,23 +72,31 @@ export default function CareerDetails() {
 
 
   const handleSend = async (e) => {
-    // e.preventDefault();
+    e.preventDefault();
 
-    console.log("FFFF", first);
+    setLoader(true)
 
-    // setLoader(true)
+    var formData = new FormData();
+    formData.append('name', first.name);
+    formData.append('email', first.email);
+    formData.append('number', first.number);
+    formData.append('resume', first.resume);
+    formData.append('job', details.title);
 
-    // const response = await axios.post("https://apsback.vercel.app/aps/send", first);
 
-    // toast.success(response.data.message, { autoClose: 3000 })
 
-    // setTimeout(() => {
-    //     setfirst({ name: "", email: "", subject: "", message: "" })
-    // }, 1000)
 
-    // if (response) {
-    //     setLoader(false)
-    // }
+    const response = await axios.post("https://apsback.vercel.app/aps/sendcareer", formData);
+
+    toast.success(response.data.message, { autoClose: 3000 })
+
+    setTimeout(() => {
+        setfirst({ name: "", email: "", subject: "", message: "" })
+    }, 1000)
+
+    if (response) {
+    setLoader(false)
+    }
 
 
   }
@@ -117,7 +126,8 @@ export default function CareerDetails() {
             style={{
               fontWeight: "bold",
               textAlign: "center",
-              color: "black"
+              color: "black",
+              fontFamily: "Plus"
             }}
           >
             {" "}
@@ -217,7 +227,7 @@ export default function CareerDetails() {
             ))}
           </DetailsDiv>
 
-         { !mailBox ? <Button
+          {!mailBox ? <Button
             startIcon={<SendIcon />}
             variant="contained"
             sx={{
@@ -230,12 +240,12 @@ export default function CareerDetails() {
           >
             {" "}
             Apply Now{" "}
-          </Button> :""}
+          </Button> : ""}
         </DetailsRoot>
       </div>
 
 
-     { mailBox ?  <div style={{ backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)`, overflow: 'hidden' }} >
+      {mailBox ? <div style={{ backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)`, overflow: 'hidden' }} >
         <ToastContainer />
         <div class="container">
           <div class="image-container">
@@ -251,11 +261,13 @@ export default function CareerDetails() {
                 <span style={{ position: 'absolute', top: '3px', right: '12px', color: '#9e9e9e', fontSize: '24px' }}>&#9993;</span>
               </div>
 
-              <input type="text" style={{ width: '100%', padding: '12px', borderRadius: '4px', border: '0px solid #dcdcdc', outline: 'none' }} placeholder="Phone Number" required value={first.subject} onChange={(e) => setfirst({ ...first, subject: e.target.value })} />
+              <input type="number" style={{ width: '100%', padding: '12px', borderRadius: '4px', border: '0px solid #dcdcdc', outline: 'none' }} placeholder="Phone Number" required value={first.number} onChange={(e) => setfirst({ ...first, number: e.target.value })} />
+
+              <input type="text" style={{ width: '100%', padding: '12px', borderRadius: '4px', border: '0px solid #dcdcdc', outline: 'none' }} placeholder="Full Name" required value={details.title} disabled />
 
 
-              <div style={{ backgroundColor: 'white' ,borderRadius: '4px' }} >
-                <input type="file" style={{ width: '100%', padding: '12px', borderRadius: '4px', border: '0px solid #dcdcdc', outline: 'none' }} placeholder="Add your Resume" rows="5" required value={first.message} onChange={(e) => setfirst({ ...first, message: e.target.value })} />
+              <div style={{ backgroundColor: 'white', borderRadius: '4px' }} >
+                <input type="file" style={{ width: '100%', padding: '12px', borderRadius: '4px', border: '0px solid #dcdcdc', outline: 'none' }} placeholder="Add your Resume" rows="5" required onChange={(e) => setfirst({ ...first, resume: e.target.files[0] })} />
               </div>
               <button disabled={loader} style={{ backgroundColor: '#007bff', color: 'white', padding: '12px', border: '4px', border: 'none', cursor: 'pointer', marginTop: '16px', width: '100%' }}>{!loader ? "Send" : "Loading"}</button>
 
