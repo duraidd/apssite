@@ -22,6 +22,7 @@ import mobFirstScreen from "../images/servicePageImages/MobApplicationDevelopmen
 
 import Appheader from "./Appheader";
 import Footer from "./Footer";
+import Breadscrum from "./Breadscrum";
 
 export default function Mobileapp() {
 
@@ -184,6 +185,7 @@ export default function Mobileapp() {
 
             <Appheader />
             
+            <Breadscrum dataParent={["Home", "Services", "Mobile Application"]}/>
 
             <div style={{ width: "100%" }}>
             <div style={{display:'flex',flexDirection:'row',justifyContent:'center',paddingLeft:'10px', marginTop: "80px"}}>

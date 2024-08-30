@@ -57,6 +57,7 @@ import muiLogo from "../images/servicePageImages/WebApplicationDevlopment/mernLo
 import htmlLogo from "../images/servicePageImages/WebApplicationDevlopment/mernLogo/HTML.svg";
 import cssLogo from "../images/servicePageImages/WebApplicationDevlopment/mernLogo/Css.svg";
 import AWSLogo from "../images/servicePageImages/WebApplicationDevlopment/mernLogo/AWS.svg";
+import Breadscrum from './Breadscrum';
 
 
 
@@ -383,6 +384,7 @@ function Webapp() {
       }} >
         <Appheader/>
        
+        <Breadscrum dataParent={["Home", "Services", "Web Application"]}/>
 
         <div style={{ width: "100%", marginTop: "2%" ,backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)` }}>
         {/* 67% middle of page */}

@@ -5,7 +5,7 @@ import { Box, Typography } from '@mui/material'
 import Appheader from './Appheader'
 import ClouImg from '../asset/Cloudser.jpg'
 import { styled } from "@mui/system";
-import {Card,CardContent} from '@mui/material'
+import { Card, CardContent } from '@mui/material'
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import ComputerIcon from "@mui/icons-material/Computer";
@@ -15,6 +15,8 @@ import ec2Img from "../images/servicePageImages/webHosting/ec2.png";
 import s3 from "../images/servicePageImages/webHosting/s3.svg";
 import csmImg from "../images/servicePageImages/webHosting/csm.svg";
 import Footer from './Footer'
+import ScrollAnimation from 'react-animate-on-scroll';
+import Breadscrum from './Breadscrum'
 
 
 
@@ -22,279 +24,281 @@ import Footer from './Footer'
 function Cloudservices() {
 
 
-    const DivStyle1 = styled("div")(({ theme }) => ({
-        display: "flex",
-        paddingLeft: "2%",
-        paddingRight: "2%",
-        justifyContent:'center',
-        alignItems:'center',
-        
-
-        [theme.breakpoints.down("md")]: {
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: 5,
-          paddingLeft: "5%",
-          paddingRight: "5%",
-        },
-        [theme.breakpoints.only("md")]: {
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: 5,
-          paddingLeft: "5%",
-          paddingRight: "5%",
-        },
-        [theme.breakpoints.up("lg")]: {
-          flexDirection: "row",
-          justifyContent: "space-between",
-        },
-        [theme.breakpoints.up("xl")]: {
-          flexDirection: "row",
-          justifyContent: "space-between",
-          paddingLeft: "15%",
-          paddingRight: "15%",
-        },
-      }));
-      const DivStyle2 = styled("div")(({ theme }) => ({        
-        ".container": {
-          position: "relative",
-          marginTop: 10,
-          boxShadow: "5px 5px 10px red",
-          "&:hover": {
-            opacity: 1,
-          },
-        },
-    
-        ".overlay": {
-          position: "absolute",
-          bottom: 0,
-          width: "100%",
-          height: "100%",
-          alignItems: "flex-end",
-          display: "flex",
-          transition: ".5s ease",
-          opacity: 0,
-          padding: "20px",
-          "&:hover": {
-            opacity: 1,
-          },
-        },
-        [theme.breakpoints.down("md")]: {
-          width: "100%",
-          margin: "0 auto",
-        },
-        [theme.breakpoints.only("md")]: {
-          width: "100%",
-          margin: "0 auto",
-        },
-        [theme.breakpoints.up("lg")]: {
-          width: "47%",
-        },
-      }));
-      const DivStyle3 = styled("div")(({ theme }) => ({
-          
-        
-        [theme.breakpoints.down("md")]: {
-          width: "100%",
-          margin: "0 auto",
-        },
-        [theme.breakpoints.only("md")]: {
-          width: "100%",
-        },
-        [theme.breakpoints.up("lg")]: {
-          width: "47%",
-        },
-      }));
-    
-      const DivStyle4 = styled("div")(({ theme }) => ({
-        display: "flex",
-        margin: "0 auto",
-        flexDirection: "column",
-        [theme.breakpoints.down("md")]: {
-          width: "90%",
-        },
-        [theme.breakpoints.up("md")]: {
-          width: "90%",
-        },
-        [theme.breakpoints.up("lg")]: {
-          width: "82%",
-        },
-        [theme.breakpoints.up("xl")]: {
-          width: "67%",
-        },
-      }));
-    
-      const cardStyle = (theme) => ({
-        backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)`,
-        '&:hover':{boxShadow: "5px 5px 10px red"},      
-
-        [theme.breakpoints.only("sm")]: {
-          height: 480,
-          marginTop: 3,
-        },
-        [theme.breakpoints.between("sm", "md")]: {
-          height: 420,
-          marginTop: 3,
-        },
-        [theme.breakpoints.only("md")]: {
-          height: 400,
-        },
-        [theme.breakpoints.up("md")]: {
-          height: 400,
-        },
-    
-        [theme.breakpoints.up("lg")]: {
-          height: 440,
-        },
-        [theme.breakpoints.up("xl")]: {
-          height: 480,
-        },
-      });
-    
-      const cardStyle1 = (theme) => ({
-        backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)`,
-        '&:hover':{boxShadow: "5px 5px 10px red"},       
-
-        [theme.breakpoints.only("sm")]: {
-          height: 480,
-          marginTop: 3,
-        },
-        [theme.breakpoints.between("sm", "md")]: {
-          height: 420,
-          marginTop: 3,
-        },
-        [theme.breakpoints.only("md")]: {
-          height: 400,
-        },
-        [theme.breakpoints.up("md")]: {
-          height: 400,
-        },
-    
-        [theme.breakpoints.up("lg")]: {
-          height: 440,
-        },
-        [theme.breakpoints.up("xl")]: {
-          height: 480,
-        },
-      });
-    
-      const cardStyle2 = (theme) => ({
-        width: "25%",
-        height: 290,
-        marginTop:10,
-        marginBottom:10,
-        boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
-        borderTop: `5px solid red`,        
-    
-        [theme.breakpoints.down("xs")]: {
-          width: "100%",
-          height: 420,
-        },
-        [theme.breakpoints.down("sm")]: {
-          width: "100%",
-          height: 420,
-        },
-        [theme.breakpoints.down("md")]: {
-          width: "100%",
-          height: 420,
-        },
-    
-        [theme.breakpoints.only("md")]: {
-          width: "40%",
-          height: 420,
-        },
-        [theme.breakpoints.up("lg")]: {
-          width: "40%",
-          height: 390,
-        },
-        [theme.breakpoints.up("xl")]: {
-          width: "30%",
-          height: 410,
-        },
-      });
-    
-      const hostingCard = [
-        "Cloud computing can also support remote web hosting. The definition of cloud computing services involves the connection of clients to vendors through wireless or IP connected networks. In cloud computing, a client sends data to a vendor through an abstract network trajectory called 'the cloud.' Data is then stored and maintained on remote servers owned and operated by the vendors.",
-        " In general, cloud computing services that include web hosting can be an alternative to other traditional kinds of web hosting that are not based on cloud computing principles. One of the biggest differences could be called a 'single client' versus 'multitenant' approach.",
-        "Cloud computing services that include web hosting are usually multitenant. That means that the files and data resources of multiple clients are housed on the same server. This provides flexibility and on-demand services for individual clients, so that providers can scale up or scale down delivery easily.By contrast, dedicated web hosting will involve a web hosting company serving only one client on any given server. This provides more individual security and a more focused approach to serving an individual customer.",
-      ];
-      const benefitsCloud = [
-        "Cloud Storage might be more secure",
-        "Zero Maintenance",
-        "Anywhere Access",
-        "Automated Backups",
-        "Pay As You Go Pricing",
-        "Scalability",
-        "Automate data protection",
-      ];
-      const serverMaintance = [
-        "Checking server log files",
-        "Assessing hard disk space",
-        "Examining folder permissions",
-        "Monitoring network temperature applications",
-        "Ensuring adequate redundancy of systems",
-        "Examining security features",
-        "Installing security software patches",
-        "Reading server logs for security alerts or evidence of computer hacking attempts",
-        "Updating antivirus software on all computers on the network",
-        "Updating critical service packs and software updates",
-      ];
-    
-      const networkMaintenance = [
-        " Troubleshooting network problems.",
-        "Hardware and software installation/configuration.",
-        "Monitoring and improving network performance.",
-        " Planning for future network growth.",
-        " Creating network documentation and keeping it up-to-date.",
-        "Ensuring compliance with company policies.",
-        "Ensuring compliance with legal regulations.",
-        " Securing the network against all kind of threats.",
-      ];
+  const DivStyle1 = styled("div")(({ theme }) => ({
+    display: "flex",
+    paddingLeft: "2%",
+    paddingRight: "2%",
+    justifyContent: 'center',
+    alignItems: 'center',
 
 
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+      gap: 5,
+      paddingLeft: "5%",
+      paddingRight: "5%",
+    },
+    [theme.breakpoints.only("md")]: {
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+      gap: 5,
+      paddingLeft: "5%",
+      paddingRight: "5%",
+    },
+    [theme.breakpoints.up("lg")]: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+    },
+    [theme.breakpoints.up("xl")]: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+      paddingLeft: "15%",
+      paddingRight: "15%",
+    },
+  }));
+  const DivStyle2 = styled("div")(({ theme }) => ({
+    ".container": {
+      position: "relative",
+      marginTop: 10,
+      boxShadow: "5px 5px 10px red",
+      "&:hover": {
+        opacity: 1,
+      },
+    },
 
-    return (
-        <>
-            <Appheader />
-            <div className="saple" style={{
-                backgroundImage: `url(${Imah})`, marginTop: "40px", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", width: '100%'
-            }} >
-                <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }} >
-                    <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }} >
-                        <hr
-                            style={{
-                                color: 'green',
-                                backgroundColor: 'red',
-                                width: 50,
-                                height: 1
-                            }}
-                        />
-                        <Typography variant='h4' color={'black'} >The Best</Typography>
+    ".overlay": {
+      position: "absolute",
+      bottom: 0,
+      width: "100%",
+      height: "100%",
+      alignItems: "flex-end",
+      display: "flex",
+      transition: ".5s ease",
+      opacity: 0,
+      padding: "20px",
+      "&:hover": {
+        opacity: 1,
+      },
+    },
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+      margin: "0 auto",
+    },
+    [theme.breakpoints.only("md")]: {
+      width: "100%",
+      margin: "0 auto",
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "47%",
+    },
+  }));
+  const DivStyle3 = styled("div")(({ theme }) => ({
 
-                        <hr
-                            style={{
-                                color: 'green',
-                                backgroundColor: 'red',
-                                width: 50,
-                                height: 1
-                            }}
-                        />
-                    </Box>
-                    <Typography variant='h2' color={'black'} >Cloud Services</Typography>
-                    <Typography variant='h6' sx={{ marginTop: '30px' }} color={'black'} >Web Hosting is a service that allows organizations and individuals to <br /> post a website or web page onto the Internet. It is the activity of providing storage space for a website that is <br /> connected to the Internet.</Typography>
-                </Box>
-            </div>
-            <div style={{ width: "100%" ,backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)`,  }}>
-        <DivStyle1 sx={{paddingTop:'2%',paddingBottom:'2%'}} >
+
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+      margin: "0 auto",
+    },
+    [theme.breakpoints.only("md")]: {
+      width: "100%",
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "47%",
+    },
+  }));
+
+  const DivStyle4 = styled("div")(({ theme }) => ({
+    display: "flex",
+    margin: "0 auto",
+    flexDirection: "column",
+    [theme.breakpoints.down("md")]: {
+      width: "90%",
+    },
+    [theme.breakpoints.up("md")]: {
+      width: "90%",
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "82%",
+    },
+    [theme.breakpoints.up("xl")]: {
+      width: "67%",
+    },
+  }));
+
+  const cardStyle = (theme) => ({
+    backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)`,
+    '&:hover': { boxShadow: "5px 5px 10px red" },
+
+    [theme.breakpoints.only("sm")]: {
+      height: 480,
+      marginTop: 3,
+    },
+    [theme.breakpoints.between("sm", "md")]: {
+      height: 420,
+      marginTop: 3,
+    },
+    [theme.breakpoints.only("md")]: {
+      height: 400,
+    },
+    [theme.breakpoints.up("md")]: {
+      height: 400,
+    },
+
+    [theme.breakpoints.up("lg")]: {
+      height: 440,
+    },
+    [theme.breakpoints.up("xl")]: {
+      height: 480,
+    },
+  });
+
+  const cardStyle1 = (theme) => ({
+    backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)`,
+    '&:hover': { boxShadow: "5px 5px 10px red" },
+
+    [theme.breakpoints.only("sm")]: {
+      height: 480,
+      marginTop: 3,
+    },
+    [theme.breakpoints.between("sm", "md")]: {
+      height: 420,
+      marginTop: 3,
+    },
+    [theme.breakpoints.only("md")]: {
+      height: 400,
+    },
+    [theme.breakpoints.up("md")]: {
+      height: 400,
+    },
+
+    [theme.breakpoints.up("lg")]: {
+      height: 440,
+    },
+    [theme.breakpoints.up("xl")]: {
+      height: 480,
+    },
+  });
+
+  const cardStyle2 = (theme) => ({
+    width: "25%",
+    height: 290,
+    marginTop: 10,
+    marginBottom: 10,
+    boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+    borderTop: `5px solid red`,
+
+    [theme.breakpoints.down("xs")]: {
+      width: "100%",
+      height: 420,
+    },
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+      height: 420,
+    },
+    [theme.breakpoints.down("md")]: {
+      width: "100%",
+      height: 420,
+    },
+
+    [theme.breakpoints.only("md")]: {
+      width: "40%",
+      height: 420,
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "40%",
+      height: 390,
+    },
+    [theme.breakpoints.up("xl")]: {
+      width: "30%",
+      height: 410,
+    },
+  });
+
+  const hostingCard = [
+    "Cloud computing can also support remote web hosting. The definition of cloud computing services involves the connection of clients to vendors through wireless or IP connected networks. In cloud computing, a client sends data to a vendor through an abstract network trajectory called 'the cloud.' Data is then stored and maintained on remote servers owned and operated by the vendors.",
+    " In general, cloud computing services that include web hosting can be an alternative to other traditional kinds of web hosting that are not based on cloud computing principles. One of the biggest differences could be called a 'single client' versus 'multitenant' approach.",
+    "Cloud computing services that include web hosting are usually multitenant. That means that the files and data resources of multiple clients are housed on the same server. This provides flexibility and on-demand services for individual clients, so that providers can scale up or scale down delivery easily.By contrast, dedicated web hosting will involve a web hosting company serving only one client on any given server. This provides more individual security and a more focused approach to serving an individual customer.",
+  ];
+  const benefitsCloud = [
+    "Cloud Storage might be more secure",
+    "Zero Maintenance",
+    "Anywhere Access",
+    "Automated Backups",
+    "Pay As You Go Pricing",
+    "Scalability",
+    "Automate data protection",
+  ];
+  const serverMaintance = [
+    "Checking server log files",
+    "Assessing hard disk space",
+    "Examining folder permissions",
+    "Monitoring network temperature applications",
+    "Ensuring adequate redundancy of systems",
+    "Examining security features",
+    "Installing security software patches",
+    "Reading server logs for security alerts or evidence of computer hacking attempts",
+    "Updating antivirus software on all computers on the network",
+    "Updating critical service packs and software updates",
+  ];
+
+  const networkMaintenance = [
+    " Troubleshooting network problems.",
+    "Hardware and software installation/configuration.",
+    "Monitoring and improving network performance.",
+    " Planning for future network growth.",
+    " Creating network documentation and keeping it up-to-date.",
+    "Ensuring compliance with company policies.",
+    "Ensuring compliance with legal regulations.",
+    " Securing the network against all kind of threats.",
+  ];
+
+
+
+  return (
+    <>
+      <Appheader />
+      <Breadscrum dataParent={["Home", "Services", "Cloud Services"]}
+       />
+      <div className="saple" style={{
+        backgroundImage: `url(${Imah})`, marginTop: "40px", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", width: '100%'
+      }} >
+        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }} >
+          <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }} >
+            <hr
+              style={{
+                color: 'green',
+                backgroundColor: 'red',
+                width: 50,
+                height: 1
+              }}
+            />
+            <Typography variant='h4' color={'black'} >The Best</Typography>
+
+            <hr
+              style={{
+                color: 'green',
+                backgroundColor: 'red',
+                width: 50,
+                height: 1
+              }}
+            />
+          </Box>
+          <Typography variant='h2' color={'black'} >Cloud Services</Typography>
+          <Typography variant='h6' sx={{ marginTop: '30px' }} color={'black'} >Web Hosting is a service that allows organizations and individuals to <br /> post a website or web page onto the Internet. It is the activity of providing storage space for a website that is <br /> connected to the Internet.</Typography>
+        </Box>
+      </div>
+      <div style={{ width: "100%", backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)`, }}>
+        <DivStyle1 sx={{ paddingTop: '2%', paddingBottom: '2%' }} >
           <DivStyle2>
             <Typography
               variant="body1"
               style={{
                 textAlign: "justify",
                 marginTop: 20,
-                color:'black' 
+                color: 'black'
               }}
             >
               Web Hosting is a service that allows organizations and individuals
@@ -310,8 +314,8 @@ function Cloudservices() {
               variant="body1"
               style={{
                 textAlign: "justify",
-                marginTop: 7, 
-                color:'black'
+                marginTop: 7,
+                color: 'black'
               }}
             >
               Their computer will then connect to your server and your
@@ -324,26 +328,28 @@ function Cloudservices() {
           </DivStyle2>
 
           <DivStyle3>
-            <div>
-              <img
-                width="100%"
-                style={{ top: 0, left: 0, height: "280px" }}
-                src={cloud}
-                alt="cloud"
-              ></img>
-            </div>
+            <ScrollAnimation animateIn='zoomIn' >
+              <div>
+                <img
+                  width="100%"
+                  style={{ top: 0, left: 0 }}
+                  src={cloud}
+                  alt="cloud"
+                ></img>
+              </div>
+            </ScrollAnimation>
           </DivStyle3>
         </DivStyle1>
       </div>
 
-      <div style={{ width: "100%" ,backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)` }}>
+      <div style={{ width: "100%", backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)` }}>
         <DivStyle1 style={{ flexDirection: "column", display: "flex" }}>
           <Typography
             variant="h4"
             sx={{
               textAlign: "justify",
-              marginTop: 10,               
-              color:'black'
+              marginTop: 10,
+              color: 'black'
             }}
           >
             AWS Development
@@ -351,15 +357,15 @@ function Cloudservices() {
         </DivStyle1>
       </div>
 
-      <div style={{ width: "100%" ,backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)`,paddingTop:'2%',paddingBottom:'3%' }}>
+      <div style={{ width: "100%", backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)`, paddingTop: '2%', paddingBottom: '3%' }}>
         <DivStyle1>
           <DivStyle2>
             <Typography
               variant="body1"
               style={{
                 textAlign: "justify",
-                marginTop: 20, 
-                color:'black'
+                marginTop: 20,
+                color: 'black'
               }}
             >
               <span style={{ fontWeight: "bold" }}>
@@ -374,8 +380,8 @@ function Cloudservices() {
               variant="body1"
               style={{
                 textAlign: "justify",
-                marginTop: 7, 
-                color:'black'
+                marginTop: 7,
+                color: 'black'
               }}
             >
               Application Nexus has good hand-in experience in Amazon Web
@@ -406,9 +412,9 @@ function Cloudservices() {
             variant="h5"
             style={{
               textAlign: "justify",
-              marginTop: 20, 
+              marginTop: 20,
               margin: "0 auto",
-              color:'black'
+              color: 'black'
             }}
           >
             Services Offered By Amazon
@@ -423,10 +429,10 @@ function Cloudservices() {
               variant="h6"
               style={{
                 textAlign: "justify",
-                marginTop: 20, 
+                marginTop: 20,
                 margin: "0 auto",
-                color:'black',
-                fontWeight:'bold'
+                color: 'black',
+                fontWeight: 'bold'
               }}
             >
               Elastic Computing
@@ -435,8 +441,8 @@ function Cloudservices() {
               variant="body1"
               style={{
                 textAlign: "justify",
-                marginTop: 20, 
-                color:'black'
+                marginTop: 20,
+                color: 'black'
               }}
             >
               An{" "}
@@ -452,8 +458,8 @@ function Cloudservices() {
               variant="body1"
               style={{
                 textAlign: "justify",
-                marginTop: 7, 
-                color:'black'
+                marginTop: 7,
+                color: 'black'
               }}
             >
               EC2 encourages the scalable deployment of applications by
@@ -466,8 +472,8 @@ function Cloudservices() {
               variant="body1"
               style={{
                 textAlign: "justify",
-                marginTop: 7, 
-                color:'black'
+                marginTop: 7,
+                color: 'black'
               }}
             >
               A user can create, launch, and terminate server-instances as
@@ -479,7 +485,7 @@ function Cloudservices() {
           </DivStyle2>
 
           <DivStyle3>
-            <div className="container" style={{boxShadow: "5px 5px 10px red",}} >
+            <div className="container" style={{ boxShadow: "5px 5px 10px red", }} >
               <img
                 width="100%"
                 style={{ top: 0, left: 0, height: "290px" }}
@@ -508,10 +514,10 @@ function Cloudservices() {
               variant="h6"
               style={{
                 textAlign: "justify",
-                marginTop: 20, 
+                marginTop: 20,
                 margin: "0 auto",
-                fontWeight:'bold'
-                
+                fontWeight: 'bold'
+
               }}
             >
               Amazon S3
@@ -520,8 +526,8 @@ function Cloudservices() {
               variant="body1"
               style={{
                 textAlign: "justify",
-                marginTop: 20, 
-                color:'black'
+                marginTop: 20,
+                color: 'black'
               }}
             >
               An{" "}
@@ -537,8 +543,8 @@ function Cloudservices() {
               variant="body1"
               style={{
                 textAlign: "justify",
-                marginTop: 7, 
-                color:'black'
+                marginTop: 7,
+                color: 'black'
               }}
             >
               The need for storage for any business increases day by day without
@@ -551,8 +557,8 @@ function Cloudservices() {
               variant="body1"
               style={{
                 textAlign: "justify",
-                marginTop: 7, 
-                color:'black'
+                marginTop: 7,
+                color: 'black'
               }}
             >
               Amazon S3 offers four different storage classes that offer
@@ -569,8 +575,8 @@ function Cloudservices() {
             variant="h6"
             style={{
               textAlign: "justify",
-              marginTop: 30,              
-              color:'black'
+              marginTop: 30,
+              color: 'black'
             }}
           >
             Why dedicated Web Hosting when Cloud Computing exist?
@@ -579,11 +585,11 @@ function Cloudservices() {
       </div>
 
       <div style={{ width: "100%", backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)` }}>
-        <DivStyle1 style={{ flexWrap: "wrap", gap: 35  }}>
+        <DivStyle1 style={{ flexWrap: "wrap", gap: 35 }}>
           {hostingCard.map((text) => (
             <Card sx={cardStyle2}>
               <CardContent>
-                <Typography variant="body1" style={{ marginTop: 10 ,color:'black' }}>
+                <Typography variant="body1" style={{ marginTop: 10, color: 'black' }}>
                   {text}
                 </Typography>
               </CardContent>
@@ -599,9 +605,9 @@ function Cloudservices() {
             variant="h5"
             style={{
               textAlign: "justify",
-              marginTop: 20, 
+              marginTop: 20,
               margin: "0 auto",
-              color:'black'
+              color: 'black'
             }}
           >
             Cloud Storage Management
@@ -617,8 +623,8 @@ function Cloudservices() {
               variant="body1"
               style={{
                 textAlign: "justify",
-                marginTop: 20, 
-                color:'black'
+                marginTop: 20,
+                color: 'black'
               }}
             >
               Cloud Data Management is the practice of storing a company's data
@@ -634,8 +640,8 @@ function Cloudservices() {
               variant="body1"
               style={{
                 textAlign: "justify",
-                marginTop: 7, 
-                color:'black'
+                marginTop: 7,
+                color: 'black'
               }}
             >
               When you adopt cloud services,you benefit from improved efficiency
@@ -665,15 +671,15 @@ function Cloudservices() {
             variant="h6"
             style={{
               textAlign: "justify",
-              marginTop: 20, 
-              color:'black'
+              marginTop: 20,
+              color: 'black'
             }}
           >
             Benefits in APS Technologies Cloud Services:
           </Typography>
           <Typography
             variant="body1"
-            style={{ textAlign: "justify",color:'black'}}
+            style={{ textAlign: "justify", color: 'black' }}
           >
             {" "}
             APS Technologies Cloud Services are designed around our customers and
@@ -692,10 +698,10 @@ function Cloudservices() {
             <div
               style={{ display: "flex", flexDirection: "row", marginTop: 15 }}
             >
-              <ArrowCircleRightIcon/>
+              <ArrowCircleRightIcon />
               <Typography
                 variant="body1"
-                sx={{  paddingLeft: 1,color:'black' }}
+                sx={{ paddingLeft: 1, color: 'black' }}
               >
                 {text}
               </Typography>
@@ -712,8 +718,8 @@ function Cloudservices() {
                 <Typography
                   variant="h6"
                   style={{
-                    marginBottom: 10, 
-                    
+                    marginBottom: 10,
+
                   }}
                 >
                   APS Technologies Server Maintenance Services{" "}
@@ -730,7 +736,7 @@ function Cloudservices() {
                     <ComputerIcon />
                     <Typography
                       variant="body1"
-                      sx={{  paddingLeft: 1, color:'black' }}
+                      sx={{ paddingLeft: 1, color: 'black' }}
                     >
                       {" "}
                       {text}
@@ -747,8 +753,8 @@ function Cloudservices() {
                 <Typography
                   variant="h6"
                   style={{
-                    marginBottom: 10, 
-                    
+                    marginBottom: 10,
+
                   }}
                 >
                   APS Technologies Network Maintenance Services{" "}
@@ -765,7 +771,7 @@ function Cloudservices() {
                     <ArrowRightAltIcon />
                     <Typography
                       variant="body1"
-                      sx={{ paddingLeft: 1 ,color:'black'}}
+                      sx={{ paddingLeft: 1, color: 'black' }}
                     >
                       {" "}
                       {text}
@@ -777,10 +783,10 @@ function Cloudservices() {
           </DivStyle3>
         </DivStyle1>
       </div>
-      <Footer/>
+      <Footer />
 
-        </>
-    )
+    </>
+  )
 }
 
 export default Cloudservices

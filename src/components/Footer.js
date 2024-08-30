@@ -29,13 +29,13 @@ function Footer(props) {
 
 
         navigate("/", { state: { section: data } });
-        
-        if(props.passFooter && props.fn ){
+
+        if (props.passFooter && props.fn) {
             props.passFooter(data);
             props.fn(data)
         }
-        
-        
+
+
     }
 
     return (
@@ -62,7 +62,7 @@ function Footer(props) {
                             Rajarajeshwari Nagar south Street <br />
                             NGO B colony <br />Tirunelveli 627007</p>
 
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=apstechnologiestvl@gmail.com">apstechnologiestvl@gmail.com</a>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@apstechnologies.co.in" target='_blank' >contact@apstechnologies.co.in</a>
                         <p>+91 7305395976</p>
                     </Box>
                     <Box>
@@ -70,19 +70,20 @@ function Footer(props) {
                         <P onClick={() => handleFoot("home")} >Home</P>
                         <P onClick={() => handleFoot("about")} >About Us</P>
                         <P onClick={() => handleFoot("contact")} >Contact Us</P>
-                        <p style={{ marginBottom: "20px", color: 'black' }} >Blog</p>
+                        {/* <p style={{ marginBottom: "20px", color: 'black' }} >Blog</p> */}
 
                     </Box>
                     <Box>
                         <h3 style={{ marginBottom: "20px" }} >Services</h3>
-                        <p style={{ marginBottom: "20px", color: 'black' }} >API Development</p>
-                        <p style={{ marginBottom: "20px", color: 'black' }} >Mule Soft</p>
-                        <p style={{ marginBottom: "20px", color: 'black' }} >Sales force</p>
+                        <P onClick={() => navigate('/web-application')}>Web Application</P>
+                        <P onClick={() => navigate('/mobile-application')}>Mobile Application</P>
+                        <P onClick={() => navigate('/cloud-services')}>Cloud Services</P>  
+                        <P onClick={() => navigate('/digital-marketing')}>Digital Marketing</P>
+
                     </Box>
                     <Box>
-                        <h3 style={{ marginBottom: "20px" }} >Resources</h3>
-                        <p style={{ marginBottom: "20px", color: 'black' }} >Portfolio</p>
-                        <p style={{ marginBottom: "20px", color: 'black' }} >Our Services</p>
+                        <h3 style={{ marginBottom: "20px" }} >Resources</h3>                        
+                        <P onClick={() => navigate('/web-application')}>Our Services</P>
                         <p style={{ marginBottom: "20px", color: 'black' }} >Careers</p>
                         <p style={{ marginBottom: "20px", color: 'black' }} >Privacy Policy</p>
 

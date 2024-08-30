@@ -16,6 +16,7 @@ import Shop from '../asset/shop.png'
 import Facard from '../asset/cards.png'
 import Fachart from '../asset/fachart.png'
 import { ScrollToTop } from "react-simple-scroll-up";
+import Breadscrum from './Breadscrum'
 
 
 
@@ -33,6 +34,10 @@ function Digitalmarketing() {
     return (
         <>
             <Appheader />
+
+            <Breadscrum dataParent={["Home", "Services", "Digital Marketing"]}/>
+
+
       <ScrollToTop bgColor="#ff0400" symbol="&#8593;" strokeFillColor="white" style={{ zIndex: 999 }} />
 
             <div className="saple" style={{
