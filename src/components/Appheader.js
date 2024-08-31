@@ -302,15 +302,17 @@ function Appheader(props) {
 
           <Box sx={{ display: { xs: "none", sm: "contents" } }} >
             {navItems.map((item) => (
-              <Button
+              <Button  disableRipple
                 key={item.name}
                 sx={{
-                  color: item.section === props.first ? "white" : "black",
+                  color: item.section === props.first ? "#2F4858" : "black",
                   fontSize: "1rem",                  
                   fontWeight: 700,
                   fontFamily:"Plus Jakarta Sans",
-                  backgroundColor: item.section === props.first ? "#2F4858" : "",
-                  "&:hover": { backgroundColor: "#2F4858" },
+                  textDecoration: item.section === props.first ? "underline" : "",
+                  textDecorationThickness:'5px',
+                  textDecorationColor:"#2F4858",
+                  "&:hover": { textDecoration: "underline",textDecorationThickness:'5px',backgroundColor:'white'},
                   marginRight: { sm: 0, lg: 10 }
                 }}
                 onClick={() => handleNav(item)}

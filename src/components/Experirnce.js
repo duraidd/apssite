@@ -1,6 +1,8 @@
 import { Box } from '@mui/material'
 import React from 'react'
-import Img1 from '../asset/impress.jpg'
+import Img1 from '../asset/tenplus.png'
+import ScrollAnimation from 'react-animate-on-scroll';
+
 
 function Experirnce() {
     return (
@@ -39,11 +41,11 @@ function Experirnce() {
                     
                 }} >                
                       
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: 'rgba(51, 122, 183, 0.1)', padding: '6px', borderRadius: '10px' }}>
-                        <span style={{ fontSize: '40px', color: '#FF2A53', fontFamily: 'Material Symbols Outlined' }}>APS Technologies</span>
-                        <p style={{ fontSize: '24px', color: '#FF2A53', fontWeight: 'bold' }}>10+</p>
-                        <p style={{ fontSize: '16px', color: '#FF2A53' }}>Years Of Experience</p>
-                    </div>
+                      <Box >
+                    <ScrollAnimation animateIn='pulse' >
+                        <img src={Img1} width={'80%'} />
+                    </ScrollAnimation>
+                </Box>
                 </Box>
                 <div>
                     <h2 style={{ fontSize: '36px', color: '#FF2A53', fontFamily: 'bold', marginBottom: '16px' }}>Empowering businesses with innovative <br /> IT solutions</h2>
