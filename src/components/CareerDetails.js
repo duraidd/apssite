@@ -268,7 +268,7 @@ export default function CareerDetails() {
 
               <input type="number" style={{ width: '100%', padding: '12px', borderRadius: '4px', border: '0px solid #dcdcdc', outline: 'none' }} placeholder="Phone Number" required value={first.number} onChange={(e) => setfirst({ ...first, number: e.target.value })} />
 
-              <input type="text" style={{ width: '100%', padding: '12px', borderRadius: '4px', border: '0px solid #dcdcdc', outline: 'none' }} placeholder="Full Name" required value={details.title} disabled />
+              <input type="text" style={{ width: '100%', padding: '12px', borderRadius: '4px', border: '0px solid #dcdcdc', outline: 'none',backgroundColor:'white' }} placeholder="Full Name" required value={details.title} disabled />
 
 
               <div style={{ backgroundColor: 'white', borderRadius: '4px' }} >
