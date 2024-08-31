@@ -84,7 +84,7 @@ function Footer(props) {
                     <Box>
                         <h3 style={{ marginBottom: "20px" }} >Resources</h3>                        
                         <P onClick={() => navigate('/web-application')}>Our Services</P>
-                        <p style={{ marginBottom: "20px", color: 'black' }} >Careers</p>
+                        <P onClick={()=>navigate('/career', { state: { section: "career" } })}>Career</P>
                         <p style={{ marginBottom: "20px", color: 'black' }} >Privacy Policy</p>
 
                     </Box>
