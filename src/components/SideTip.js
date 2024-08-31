@@ -14,18 +14,17 @@ export default function SideTip() {
     position: "fixed",
     right: 2,
     transform: `translateY(-50%)`,
-
     color: "white",
     padding: "0.5%",
     display: "flex",
     cursor: "pointer",
     justifyContent: "center",
     borderRadius: "44px",
-    background: `#018e4c`,
-    boxShadow: `3px 3px 5px #016c3a,
--3px -3px 5px #01b05e`,
+    background: `#FF2A53`,
+    boxShadow: `3px 3px 5px #FF2A53,
+-3px -3px 5px #FF2A53`,
 
-    // transition:'0.8s',
+    transition:'0.8s',
 
     "& .myText": {
       display: "none",
@@ -37,7 +36,7 @@ export default function SideTip() {
 
     ".myText": {
       marginRight: "0.5%",
-      whiteSpace: "nowrap",
+      whiteSpace: "nowrap",      
     },
   }));
 
@@ -48,7 +47,7 @@ export default function SideTip() {
       <SideStyle
         style={{ top: "45%" }}
         onClick={() => {
-          window.open("tel:7538862862", "_self");
+          window.open("tel:917305395976", "_self");
         }}
       >
         <CallIcon />
@@ -58,8 +57,9 @@ export default function SideTip() {
       <SideStyle
         style={{ top: "52%" }}
         onClick={() => {
-          window.open("mailto:career@ncpli.com", "_self");
+          window.open("https://mail.google.com/mail/?view=cm&fs=1&to=contact@apstechnologies.co.in", "_blank");
         }}
+        
       >
         <MailIcon />
         <Typography className="myText">Mail Us </Typography>
@@ -68,7 +68,7 @@ export default function SideTip() {
       <SideStyle
         style={{ top: "59%" }}
         onClick={() => {
-          window.open("https://wa.me/+917538862862");
+          window.open("https://wa.me/+917305395976");
         }}
       >
         <WhatsAppIcon />

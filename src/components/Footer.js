@@ -72,7 +72,7 @@ function Footer(props) {
                         <p>+91 7305395976</p>
                     </Box>
                     <Box>
-                        <h3 style={{ marginBottom: "20px" ,paddingLeft:'10px' }} >Quick Link</h3>
+                        <h3 style={{ marginBottom: "20px" ,padding:'0px 10px' }} >Quick Link</h3>
                         <P onClick={() => handleFoot("home")} >Home</P>
                         <P onClick={() => handleFoot("about")} >About Us</P>
                         <P onClick={() => handleFoot("contact")} >Contact Us</P>
@@ -80,7 +80,7 @@ function Footer(props) {
 
                     </Box>
                     <Box>
-                        <h3 style={{ marginBottom: "20px" ,paddingLeft:'10px' }} >Services</h3>
+                        <h3 style={{ marginBottom: "20px" ,padding:'0px 10px' }} >Services</h3>
                         <P onClick={() => navigate('/web-application')}>Web Application</P>
                         <P onClick={() => navigate('/mobile-application')}>Mobile Application</P>
                         <P onClick={() => navigate('/cloud-services')}>Cloud Services</P>  
@@ -88,7 +88,7 @@ function Footer(props) {
 
                     </Box>
                     <Box>
-                        <h3 style={{ marginBottom: "20px",paddingLeft:'10px' }} >Resources</h3>                        
+                        <h3 style={{ marginBottom: "20px",padding:'0px 10px' }} >Resources</h3>                        
                         <P onClick={() => navigate('/web-application')}>Our Services</P>
                         <P onClick={()=>navigate('/career', { state: { section: "career" } })}>Career</P>
                         <P onClick={()=>navigate('/privacypolicy')} >Privacy Policy</P>

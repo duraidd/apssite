@@ -3,12 +3,14 @@ import Appheader from './Appheader'
 import Breadscrum from './Breadscrum'
 import Footer from './Footer'
 import { Box } from '@mui/material'
+import SideTip from "./SideTip";
 
 function Privacypolicy() {
     return (
         <>
             <Appheader />
             <Breadscrum dataParent={["Home", "Privacy Policy"]} />
+            <SideTip/>
             <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '50px' }} >
                 <Box sx={{ marginTop: '120px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}><h1>Privacy Policy</h1></Box>
                 <Box sx={{padding:'0px 10%',fontFamily:'Plus Jakarta Sans'}}>

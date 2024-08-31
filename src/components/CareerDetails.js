@@ -13,7 +13,7 @@ import { ScrollToTop } from "react-simple-scroll-up";
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import SendIcon from "@mui/icons-material/Send";
-import SideTip from "./SideTip";
+
 
 import BulletIconJD from "@mui/icons-material/KeyboardDoubleArrowRight";
 import BulletIconRS from "@mui/icons-material/DoneOutline";
@@ -121,7 +121,7 @@ export default function CareerDetails() {
 
 
 
-      {/* <SideTip /> */}
+      
 
       <div style={{ display: "flex", justifyContent: "center", marginTop: '120px', marginBottom: "80px" }}>
         {/* details root */}
