@@ -28,7 +28,7 @@ export default function Carrer() {
   const [first, setfirst] = useState(section);
   const [second, setsecond] = useState("");
 
-console.log("section",section)
+
 
   const BreadcrumbStyle = styled("div")(({ theme }) => ({
     display: "flex",
