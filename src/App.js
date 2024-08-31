@@ -10,6 +10,7 @@ import Digitalmarketing from "./components/Digitalmarketing";
 import Cloudservices from "./components/Cloudservices";
 import CareerDetails from "./components/CareerDetails";
 import Career from "./components/Carrer";
+import Privacypolicy from "./components/Privacypolicy";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/careerdetails" element={<CareerDetails/>}/>
         <Route path="/career" element={<Career/>}/>
         <Route path="/contact" element={<Contact />} />
+        <Route path="/privacypolicy" element={<Privacypolicy/>}/>
       </Routes>
     </BrowserRouter>
   );

@@ -306,9 +306,9 @@ function Appheader(props) {
                 key={item.name}
                 sx={{
                   color: item.section === props.first ? "white" : "black",
-                  fontSize: "1rem",
-                  typography: { fontFamily: '"Lato, sans-serif"' },
+                  fontSize: "1rem",                  
                   fontWeight: 700,
+                  fontFamily:"Plus Jakarta Sans",
                   backgroundColor: item.section === props.first ? "#2F4858" : "",
                   "&:hover": { backgroundColor: "#2F4858" },
                   marginRight: { sm: 0, lg: 10 }
@@ -363,6 +363,7 @@ function Appheader(props) {
                     },
                     transition: '0.3s',
                     borderRadius: '5px',
+                    fontFamily:'Plus Jakarta Sans'
                   }}
                   onClick={(e) => { handleClickSubmenu1(text, mySubMenu); }}
                 >

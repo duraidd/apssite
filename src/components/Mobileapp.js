@@ -183,12 +183,12 @@ export default function Mobileapp() {
 
 
 
-            <Appheader />
+            <Appheader first={"services"} />
             
             <Breadscrum dataParent={["Home", "Services", "Mobile Application"]}/>
 
             <div style={{ width: "100%" }}>
-            <div style={{display:'flex',flexDirection:'row',justifyContent:'center',paddingLeft:'10px', marginTop: "80px"}}>
+            <div style={{display:'flex',flexDirection:'row',justifyContent:'center',paddingLeft:'10px', marginTop: "150px",marginBottom:"50px"}}>
                 <Typography variant='h4' style={{ textDecoration: 'underline',textDecorationColor:'#FF2A53' }} >Mobile Application Development</Typography>
             </div>
                 {/* 67% middle of page */}

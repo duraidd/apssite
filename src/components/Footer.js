@@ -11,7 +11,9 @@ import { useNavigate } from 'react-router-dom'
 
 
 const P = styled.p`
+  
   color:black;
+  font-family: 'Plus Jakarta Sans';
   margin-bottom: 20px;
   cursor: pointer;
   &:hover {
@@ -57,8 +59,8 @@ function Footer(props) {
                 </Box>
                 <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: "wrap", justifyContent: "space-between" }}>
                     <Box>
-                        <h3 style={{ marginBottom: "20px" }} >Office</h3>
-                        <p style={{ marginBottom: "20px", color: 'black' }} >23/C, First floor,<br />
+                        <h3 style={{ marginBottom: "20px", fontFamily:'Plus Jakarta Sans',fontWeight:'bold' }} >Office</h3>
+                        <p style={{ marginBottom: "20px",fontFamily:'Plus Jakarta Sans', color: 'black' }} >23/C, First floor,<br />
                             Rajarajeshwari Nagar south Street <br />
                             NGO B colony <br />Tirunelveli 627007</p>
 
@@ -85,12 +87,12 @@ function Footer(props) {
                         <h3 style={{ marginBottom: "20px" }} >Resources</h3>                        
                         <P onClick={() => navigate('/web-application')}>Our Services</P>
                         <P onClick={()=>navigate('/career', { state: { section: "career" } })}>Career</P>
-                        <p style={{ marginBottom: "20px", color: 'black' }} >Privacy Policy</p>
+                        <P onClick={()=>navigate('/privacypolicy')} >Privacy Policy</P>
 
                     </Box>
                 </Box>
                 <Divider />
-                <p style={{ color: 'black' }} >Copyright©2024 APS Technologies Pvt Ltd, All rights reserved</p>
+                <p style={{ color: 'black' ,fontFamily:'Plus Jakarta Sans' }} >Copyright©2024 APS Technologies Pvt Ltd, All rights reserved</p>
             </ScrollAnimation>
         </div>
     )

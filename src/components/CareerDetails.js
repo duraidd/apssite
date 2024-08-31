@@ -113,9 +113,9 @@ export default function CareerDetails() {
 
   return (
     <>
-      <ScrollToTop bgColor="green" symbol="&#8593;" strokeFillColor="white" />
+      <ScrollToTop bgColor="#ff0400" symbol="&#8593;" strokeFillColor="white" />
 
-      <Appheader />
+      <Appheader  first={"career"} />
 
       <Breadscrum dataParent={["Home", "Career", "Career Details"]} />
 

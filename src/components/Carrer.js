@@ -19,6 +19,8 @@ import CareerBanner from "../asset/career_bg.svg";
 import SchoolIcon from '@mui/icons-material/School';
 import Appheader from "./Appheader";
 import Footer from "./Footer";
+import Breadscrum from "./Breadscrum";
+
 
 export default function Carrer() {
 
@@ -29,11 +31,6 @@ export default function Carrer() {
   const [second, setsecond] = useState("");
 
 
-
-  const BreadcrumbStyle = styled("div")(({ theme }) => ({
-    display: "flex",
-    justifyContent: "center",
-  }));
 
   const CardRow = styled("div")(({ theme }) => ({
     display: "flex",
@@ -394,11 +391,13 @@ export default function Carrer() {
 
       <Appheader passChildData={setfirst} addData={second} first={first} />
 
+      <Breadscrum dataParent={["Home", "Services", "Web Application"]}/>
+
       <div
         style={{
           display: "flex",
           justifyContent: "center",
-          marginTop:'80px',
+          marginTop:'120px',
           padding: "1% 2%",
         }}
       >
