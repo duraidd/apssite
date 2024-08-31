@@ -96,8 +96,7 @@ function Cloudservices() {
     },
   }));
   const DivStyle3 = styled("div")(({ theme }) => ({
-
-
+    margin:"2% 5%",
     [theme.breakpoints.down("md")]: {
       width: "100%",
       margin: "0 auto",
@@ -394,14 +393,18 @@ function Cloudservices() {
           </DivStyle2>
 
           <DivStyle3>
-            <div className="container">
+            
+            {/* <div className="container" style={{textAlign:'center'}} > */}
+            <ScrollAnimation animateIn="zoomIn">
               <img
                 width="100%"
                 style={{ top: 0, left: 0, height: "220px" }}
                 src={awsImg}
                 alt="awsImg"
               ></img>
-            </div>
+              </ScrollAnimation>
+            {/* </div> */}
+            
           </DivStyle3>
         </DivStyle1>
       </div>
@@ -410,11 +413,12 @@ function Cloudservices() {
         <DivStyle1 style={{ flexDirection: "column", display: "flex" }}>
           <Typography
             variant="h5"
-            style={{
+            sx={{
               textAlign: "justify",
               marginTop: 20,
               margin: "0 auto",
-              color: 'black'
+              color: 'black',
+              fontWeight:'bold'
             }}
           >
             Services Offered By Amazon
@@ -483,15 +487,17 @@ function Cloudservices() {
               high levels of redundancy.
             </Typography>
           </DivStyle2>
-
+          
           <DivStyle3>
             <div className="container" style={{ boxShadow: "5px 5px 10px red", }} >
+              <ScrollAnimation animateIn='zoomIn'>
               <img
                 width="100%"
                 style={{ top: 0, left: 0, height: "290px" }}
                 src={ec2Img}
                 alt="ec2Img"
               ></img>
+              </ScrollAnimation>
             </div>
           </DivStyle3>
         </DivStyle1>
@@ -501,12 +507,14 @@ function Cloudservices() {
         <DivStyle1>
           <DivStyle2>
             <div className="container">
+            <ScrollAnimation animateIn='zoomIn'>
               <img
                 width="100%"
                 style={{ top: 0, left: 0, height: "290px" }}
                 src={s3}
                 alt="s3"
               ></img>
+              </ScrollAnimation>
             </div>
           </DivStyle2>
           <DivStyle3>
@@ -585,7 +593,8 @@ function Cloudservices() {
       </div>
 
       <div style={{ width: "100%", backgroundImage: `linear-gradient(90deg, rgba(255,219,219,1) 0%, rgba(240,126,126,1) 93%)` }}>
-        <DivStyle1 style={{ flexWrap: "wrap", gap: 35 }}>
+      <ScrollAnimation animateIn="zoomIn" >
+        <DivStyle1 style={{ flexWrap: "wrap", gap: 35 }}>          
           {hostingCard.map((text) => (
             <Card sx={cardStyle2}>
               <CardContent>
@@ -594,8 +603,9 @@ function Cloudservices() {
                 </Typography>
               </CardContent>
             </Card>
-          ))}
+          ))}          
         </DivStyle1>
+        </ScrollAnimation>
       </div>
 
       <div style={{ width: "100%", marginTop: "2%" }}>
@@ -653,14 +663,14 @@ function Cloudservices() {
           </DivStyle2>
 
           <DivStyle3>
-            <div>
+            <ScrollAnimation animateIn="zoomIn">
               <img
                 width="100%"
-                style={{ top: 0, left: 0, height: "280px" }}
+                style={{ top: 0, left: 0, height: "280px"}}
                 src={csmImg}
                 alt="csmImg"
               ></img>
-            </div>
+            </ScrollAnimation>
           </DivStyle3>
         </DivStyle1>
       </div>

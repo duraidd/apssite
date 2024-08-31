@@ -23,6 +23,8 @@ import mobFirstScreen from "../images/servicePageImages/MobApplicationDevelopmen
 import Appheader from "./Appheader";
 import Footer from "./Footer";
 import Breadscrum from "./Breadscrum";
+import { ScrollToTop } from "react-simple-scroll-up";
+
 
 export default function Mobileapp() {
 
@@ -184,6 +186,9 @@ export default function Mobileapp() {
 
 
             <Appheader first={"services"} />
+
+      <ScrollToTop bgColor="#ff0400" symbol="&#8593;" strokeFillColor="white" style={{ zIndex: 999 }} />
+
             
             <Breadscrum dataParent={["Home", "Services", "Mobile Application"]}/>
 

@@ -34,6 +34,8 @@ function Digitalmarketing() {
     return (
         <>
             <Appheader first={"services"} />
+      <ScrollToTop bgColor="#ff0400" symbol="&#8593;" strokeFillColor="white" style={{ zIndex: 999 }} />
+
 
             <Breadscrum dataParent={["Home", "Services", "Digital Marketing"]}/>
 

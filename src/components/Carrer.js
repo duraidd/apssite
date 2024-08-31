@@ -391,7 +391,7 @@ export default function Carrer() {
 
       <Appheader passChildData={setfirst} addData={second} first={first} />
 
-      <Breadscrum dataParent={["Home", "Services", "Web Application"]}/>
+      <Breadscrum dataParent={["Home", "Career"]}/>
 
       <div
         style={{
