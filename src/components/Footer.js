@@ -14,10 +14,14 @@ const P = styled.p`
   
   color:black;
   font-family: 'Plus Jakarta Sans';
-  margin-bottom: 20px;
-  cursor: pointer;
+  margin-bottom: 20px;  
+  cursor: pointer; 
+  padding-left:10px; 
   &:hover {
-    color: red;
+    color: white;
+    background-color:grey;
+    border-radius:5px;
+        
   }
 `;
 
@@ -60,7 +64,7 @@ function Footer(props) {
                 <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: "wrap", justifyContent: "space-between" }}>
                     <Box>
                         <h3 style={{ marginBottom: "20px", fontFamily:'Plus Jakarta Sans',fontWeight:'bold' }} >Office</h3>
-                        <p style={{ marginBottom: "20px",fontFamily:'Plus Jakarta Sans', color: 'black' }} >23/C, First floor,<br />
+                        <p style={{ marginBottom: "20px",fontFamily:'Plus Jakarta Sans', color: 'black' ,fontWeight:'bold' }} >23/C, First floor,<br />
                             Rajarajeshwari Nagar south Street <br />
                             NGO B colony <br />Tirunelveli 627007</p>
 
@@ -68,7 +72,7 @@ function Footer(props) {
                         <p>+91 7305395976</p>
                     </Box>
                     <Box>
-                        <h3 style={{ marginBottom: "20px" }} >Quick Link</h3>
+                        <h3 style={{ marginBottom: "20px" ,paddingLeft:'10px' }} >Quick Link</h3>
                         <P onClick={() => handleFoot("home")} >Home</P>
                         <P onClick={() => handleFoot("about")} >About Us</P>
                         <P onClick={() => handleFoot("contact")} >Contact Us</P>
@@ -76,7 +80,7 @@ function Footer(props) {
 
                     </Box>
                     <Box>
-                        <h3 style={{ marginBottom: "20px" }} >Services</h3>
+                        <h3 style={{ marginBottom: "20px" ,paddingLeft:'10px' }} >Services</h3>
                         <P onClick={() => navigate('/web-application')}>Web Application</P>
                         <P onClick={() => navigate('/mobile-application')}>Mobile Application</P>
                         <P onClick={() => navigate('/cloud-services')}>Cloud Services</P>  
@@ -84,7 +88,7 @@ function Footer(props) {
 
                     </Box>
                     <Box>
-                        <h3 style={{ marginBottom: "20px" }} >Resources</h3>                        
+                        <h3 style={{ marginBottom: "20px",paddingLeft:'10px' }} >Resources</h3>                        
                         <P onClick={() => navigate('/web-application')}>Our Services</P>
                         <P onClick={()=>navigate('/career', { state: { section: "career" } })}>Career</P>
                         <P onClick={()=>navigate('/privacypolicy')} >Privacy Policy</P>

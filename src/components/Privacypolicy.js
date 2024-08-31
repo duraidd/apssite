@@ -12,7 +12,7 @@ function Privacypolicy() {
             <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '50px' }} >
                 <Box sx={{ marginTop: '120px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}><h1>Privacy Policy</h1></Box>
                 <Box sx={{padding:'0px 10%',fontFamily:'Plus Jakarta Sans'}}>
-                    <h5>
+                    
                     APS Technologies  is committed to protecting your privacy and ensuring a safe and secure online experience. This Privacy Policy outlines our practices regarding the collection, use, and protection of your personal information on our website, apstechnologies.co.in. By using our website, you consent to the practices described in this policy.
                     This policy applies exclusively to APS Technologies and not to other companies, organizations, or websites to which we may link.<br/><br/>
                     1. Information Collection and Usage <br/>
@@ -34,7 +34,7 @@ function Privacypolicy() {
                     4. Continuous Improvement<br/>
                     We may use the information we collect to provide, maintain, protect, and improve our services, as well as to develop new services that better meet your needs.<br/><br/>
                    
-                    </h5>
+                    
                 </Box>
             </Box>
             <Footer />
