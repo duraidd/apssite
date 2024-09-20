@@ -89,7 +89,7 @@ console.log("first",first)
       >
         <div style={{ textAlign: "center", display: "flex", flexDirection: "column", paddingLeft: "20px", paddingRight: "20px" }}>
           <ScrollAnimation animateIn="swing" animateOnce >
-            <Typography variant='h2' color={'black'} >Software Development <br />
+            <Typography variant='h4' color={'black'} >Software Development <br />
               From Idea to Product</Typography>
           </ScrollAnimation>
           <div>
