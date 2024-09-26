@@ -288,7 +288,7 @@ export default function Mobileapp() {
             </MobAppDevStepsSection>
 
             {/* Full vertical page */}
-            <div style={{ width: "100%", marginTop: 25, marginBottom: 50 }}>
+            {/* <div style={{ width: "100%", marginTop: 25, marginBottom: 50 }}>
                 <DivStyle1>
                     <img
                         src={width < 800 ? serviceMob : service}
@@ -297,7 +297,7 @@ export default function Mobileapp() {
                         height={width < 800 ? "350px" : "400px"}
                     />
                 </DivStyle1>
-            </div>
+            </div> */}
 
             {/* Full vertical page */}
             <div style={{ width: "100%", marginTop: 25 }}>
