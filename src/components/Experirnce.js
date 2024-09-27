@@ -48,7 +48,7 @@ function Experirnce() {
                 </Box>
                 </Box>
                 <div>
-                    <h2 style={{ fontSize: '36px', color: '#FF2A53', fontFamily: 'bold', marginBottom: '16px' }}>Empowering businesses with innovative <br /> IT solutions</h2>
+                    <h2 style={{ fontSize: '36px', color: '#2F4858', fontFamily: 'bold', marginBottom: '16px' }}>Empowering businesses with innovative <br /> IT solutions</h2>
                     <p style={{ fontSize: '16px', color: '#333', marginBottom: '16px' }}>We are a team of passionate technology enthusiasts who are dedicated to  helping businesses achieve their goals through innovative IT solutions.</p>
                     <p style={{ fontSize: '16px', color: '#333', marginBottom: '16px' }}>Our expertise lies in developing and implementing cutting-edge solutions that streamline your business processes, enhance productivity,<br /> and drive growth. We work with a wide range of clients  across industries, from small startups  to large corporations, to deliver customized <br /> IT services that fit their unique needs.</p>
                     <p style={{ fontSize: '16px', color: '#333' }}>We are a team of passionate technology enthusiasts who are dedicated to<br /> helping businesses achieve their goals <br /> through innovative IT solutions.</p>

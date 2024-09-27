@@ -27,7 +27,7 @@ export default function Contact() {
             style={{
               fontFamily: "font-title",
               fontSize: "1.875rem",
-              color: "#333",
+              color: "#2F4858",
             }}
           >
             Customized IT Services to Elevate your Business
@@ -64,7 +64,12 @@ export default function Contact() {
             padding: "2rem",
             border: "1px solid",
             borderColor: 'rgb(255,179,180)',
-            "&:hover":{boxShadow: "8px 12px 12px #f8a6b6"}
+            "&:hover":{boxShadow: "8px 12px 12px #f8a6b6"},
+            width:'407px',
+            height:'401px',
+            '@media(max-width:425px)':{
+              width:'100%'
+             }  
           }}
         >
           <div
@@ -85,12 +90,13 @@ export default function Contact() {
             </div>
           </div>
             <h2
-              style={{ fontSize: "1.25rem", fontWeight: 600, color: "#333" }}
+              style={{ fontSize: "1.25rem", fontWeight: 600, color: "#2F4858" }}
             >
-              API Development
+              Tailored Solutions
             </h2>
           
-            <p style={{ marginTop: "1rem", color: "#666" }}>We provide comprehensive API development <br /> services to help businesses build scalable and <br /> secure APIs. Our expert team offers end-to <br /> -end solutions for API development, from design <br /> and development to testing and deployment.</p>
+            <p style={{ marginTop: "1rem", color: "#666" }}>We understand that every business is unique. Our team works closely 
+            with you to develop custom software that precisely fits your requirements.</p>
           
           <div
             style={{
@@ -123,7 +129,12 @@ export default function Contact() {
             padding: "2rem",
             border: "1px solid",
             borderColor: 'rgb(255,179,180)',
-            "&:hover":{ boxShadow: "8px 12px 12px #f8a6b6"} 
+            "&:hover":{ boxShadow: "8px 12px 12px #f8a6b6"} ,
+            width:'407px',
+            height:'401px',
+            '@media(max-width:425px)':{
+              width:'100%'
+             }  
           }}
         >
           <div
@@ -144,12 +155,13 @@ export default function Contact() {
             </div>
           </div>
             <h2
-              style={{ fontSize: "1.25rem", fontWeight: 600, color: "#333" }}
+              style={{ fontSize: "1.25rem", fontWeight: 600, color: "#2F4858" }}
             >
-              API Development
+              Efficiency and Innovation
             </h2>
           
-            <p style={{ marginTop: "1rem", color: "#666" }}>We provide comprehensive API development <br /> services to help businesses build scalable and <br /> secure APIs. Our expert team offers end-to <br /> -end solutions for API development, from design <br /> and development to testing and deployment.</p>
+            <p style={{ marginTop: "1rem", color: "#666" }}>Our goal is to enhance your business efficiency through 
+            innovative software solutions that keep you ahead in the fast-paced digital world.</p>
           
           <div
             style={{
@@ -184,7 +196,12 @@ export default function Contact() {
             padding: "2rem",
             border: "1px solid",
             borderColor: 'rgb(255,179,180)',            
-           "&:hover":{ boxShadow: "8px 12px 12px #f8a6b6"} 
+           "&:hover":{ boxShadow: "8px 12px 12px #f8a6b6"} ,
+           width:'407px',
+           height:'401px',
+           '@media(max-width:425px)':{
+            width:'100%'
+           }           
           }}
         >
           <div
@@ -205,12 +222,13 @@ export default function Contact() {
             </div>
           </div>
             <h2
-              style={{ fontSize: "1.25rem", fontWeight: 600, color: "#333" }}
+              style={{ fontSize: "1.25rem", fontWeight: 600, color: "#2F4858" }}
             >
-              API Development
+              Comprehensive Services
             </h2>
           
-            <p style={{ marginTop: "1rem", color: "#666" }}>We provide comprehensive API development <br /> services to help businesses build scalable and <br /> secure APIs. Our expert team offers end-to <br /> -end solutions for API development, from design <br /> and development to testing and deployment.</p>
+            <p style={{ marginTop: "1rem", color: "#666" }}>From billing and bookkeeping to payroll and project management, 
+            we offer a wide range of services to meet all your business needs.</p>
           
           <div
             style={{

@@ -22,9 +22,10 @@ export default function About() {
      
       <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', flexWrap: 'wrap', marginTop: '30px' }} >
       <ScrollAnimation animateIn="bounceInRight" duration="2" animateOnce > 
-        <h1>Technologically diverse solutions <br /> with APS Technologies</h1>
-        <p style={{fontFamily:'Plus'}} >Phi Dimensions is your one stop shop for technologically diverse solutions <br /> driven by top-notch platforms like MuleSoft , Salesforce, API (Application <br /> Programming Interface).</p>
-        <p style={{fontFamily:'sans-serif'}} >As the business world continues to evolve, companies are faced with <br /> challenges they must navigate through the power of technology. If you don’t <br /> act at the right time, chances are you’ll be left behind. To ensure this never <br /> happens, we help you manage reliable technology integrations based on our <br /> tried and tested strategies.</p>
+        <h1 style={{color:'#2F4858'}} >Technologically diverse solutions <br /> with APS Technologies</h1>
+        <p style={{fontFamily:'Plus' ,color:'#2F4858' }} >When searching for business application software, many owners<br/> mistakenly opt for 
+        Commercial-off-the-shelf (COTS) software. <br /> driven by top-notch platforms like MuleSoft , Salesforce, API (Application <br /> Programming Interface).</p>
+        <p style={{fontFamily:'Plus',color:'#2F4858'}} >As the business world continues to evolve, companies are faced with <br /> challenges they must navigate through the power of technology. If you don’t <br /> act at the right time, chances are you’ll be left behind. To ensure this never <br /> happens, we help you manage reliable technology integrations based on our <br /> tried and tested strategies.</p>
         </ScrollAnimation>
 
         {/* <ScrollAnimation animateIn="pulse" animateOnce > 

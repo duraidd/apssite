@@ -24,7 +24,7 @@ function Custcard() {
                         style={{
                             fontFamily: "font-title",
                             fontSize: "1.875rem",
-                            color: "#333",
+                            color: "#2F4858",
                         }}
                     >
                         Customized IT Services to Elevate your Business

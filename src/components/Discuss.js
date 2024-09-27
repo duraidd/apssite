@@ -21,8 +21,8 @@ function Discuss(props) {
 
 
             <Box sx={{ width: "100%", display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", gap: "20px", '@media(max-width:600px)': { flexWrap: "wrap" } }} >
-                <h1>Let's <br />
-                    <span style={{ color: "#FF2A53" }} >Discuss</span></h1>
+                <h1 style={{color:'#2F4858'}} >Let's <br />
+                    <span style={{ color: "#2F4858" }} >Discuss</span></h1>
                 <Box sx={{
                     '@media (max-width: 768px)': {
                         display: 'none',
@@ -31,7 +31,7 @@ function Discuss(props) {
                     <img src={Img2} width={'100%'}   />
                 </Box>
                 <Box sx={{ border: "1px solid #FF2A53", padding: "2rem", borderRadius: "10px", "&:hover": { boxShadow: "8px 12px 12px #f8a6b6" } }} >
-                    <h3 style={{ color: "#FF2A53" }}>At APS Technologies IT Services, we thrive on challenges and <br /> are passionate about delivering exceptional results.</h3>
+                    <h3 style={{ color: "#2F4858" }}>At APS Technologies IT Services, we thrive on challenges and <br /> are passionate about delivering exceptional results.</h3>
                     <p>With our experienced team of IT professionals, we have the <br /> expertise & knowledge to tackle projects of varying sizes.</p>
                     <Button sx={{
                         color: "white",

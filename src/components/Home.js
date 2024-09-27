@@ -35,10 +35,6 @@ export default function Home() {
   const [second, setsecond] = useState("");
 
 
-console.log("first",first)
-
-
-
   useEffect(() => {
 
 
@@ -73,7 +69,7 @@ console.log("first",first)
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        overflow: "hidden"       
+        overflow: "hidden"
       }}
     >
 
@@ -87,15 +83,35 @@ console.log("first",first)
           backgroundImage: `url(${Imah})`, marginTop: "40px", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", width: '100%'
         }}
       >
-        <div style={{ textAlign: "center", display: "flex", flexDirection: "column", paddingLeft: "20px", paddingRight: "20px" }}>
+        <Box sx={{ textAlign: "center", display: "flex", flexDirection: "column", paddingLeft: "20px", paddingRight: "20px", '@media (max-width:768px)': { display: 'none' } }}>
           <ScrollAnimation animateIn="swing" animateOnce >
-            <Typography variant='h4' color={'black'} >Software Development <br />
+            <Typography variant='h4' color={'black'} style={{ backdropFilter: 'blur(3px)' }} >Software Development
               From Idea to Product</Typography>
+            <p style={{ textAlign: 'center', color: 'black', margin: '50px', backdropFilter: 'blur(3px)' }} >We are a growing web solutions and services provider based in Tirunelveli, comprising
+              highly talented software professionals. Upgrade your business to thrive in today’s digital world.
+              From software development to digital marketing, graphic design to website management, we
+              offer comprehensive support for your business's digital development. Let us assist you in
+              achieving your business goals with our reliable IT and digital marketing services.</p>
           </ScrollAnimation>
           <div>
             <Button variant="contained" sx={{ backgroundColor: "#FF2A53", "&:hover": { backgroundColor: "#FF2A53" } }} >Get Started</Button>
           </div>
-        </div>
+        </Box>
+
+        <Box sx={{ textAlign: "center", display: "flex", flexDirection: "column", paddingLeft: "20px", paddingRight: "20px", '@media (min-width:768px)': { display: 'none' } }}>
+          <ScrollAnimation animateIn="swing" animateOnce >
+            <Typography variant='h4' color={'black'} style={{ backdropFilter: 'blur(3px)' }} >Software Development
+              From Idea to Product</Typography>
+            {/* <p style={{ textAlign: 'center', color: 'black', margin: '50px', backdropFilter: 'blur(3px)' }} >We are a growing web solutions and services provider based in Tirunelveli, comprising
+              highly talented software professionals. Upgrade your business to thrive in today’s digital world.
+              From software development to digital marketing, graphic design to website management, we
+              offer comprehensive support for your business's digital development. Let us assist you in
+              achieving your business goals with our reliable IT and digital marketing services.</p> */}
+          </ScrollAnimation>
+          <div style={{marginTop:'20px'}} >
+            <Button variant="contained" sx={{ backgroundColor: "#FF2A53", "&:hover": { backgroundColor: "#FF2A53" } }} >Get Started</Button>
+          </div>
+        </Box>
 
       </div>
       <div ref={about}><About /></div>
@@ -104,7 +120,7 @@ console.log("first",first)
       <Custcard />
       <Experirnce />
       <Empower />
-      <div ref={discuss} style={{width:'100%'}} ><Discuss passData={setfirst} /></div>
+      <div ref={discuss} style={{ width: '100%' }} ><Discuss passData={setfirst} /></div>
       <Flag />
       <div style={{ width: '100%' }} ref={contact} >
         <Timepage />
